@@ -3,25 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Matvey Klimanskiy — full-stack developer, website rebuilds</title>
-<meta name="description" content="Matvey Klimanskiy, full-stack developer based in Nha Trang, Vietnam. Rebuilds outdated websites for small businesses (five dive centres so far) and builds his own products: WipeSquad, MeToo, Tutor.">
+<title>Outdated website rebuilt within a week, preview before you pay | Matvey Klimanskiy</title>
+<meta name="description" content="I rebuild outdated small-business websites within a week: same pages, same prices, a site that loads fast on a phone. You see a working preview before you pay anything. Matvey Klimanskiy, full-stack developer in Nha Trang, Vietnam.">
 <link rel="canonical" href="https://klimanskiy1.github.io/">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Matvey Klimanskiy">
+<meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://klimanskiy1.github.io/">
-<meta property="og:title" content="Matvey Klimanskiy — websites rebuilt, products built">
-<meta property="og:description" content="Full-stack developer. I rebuild outdated websites for real businesses and build products of my own.">
+<meta property="og:title" content="Your outdated website, rebuilt within a week">
+<meta property="og:description" content="Same pages, same prices, a site that loads on a phone. You see a working preview before you pay anything.">
 <meta property="og:image" content="https://klimanskiy1.github.io/assets/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#F7F6F3" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0F0F10" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23121212'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial Black,Arial,sans-serif' font-weight='900' font-size='19' fill='%23F7F6F3'%3EMK%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0E0E0F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23EDECE8'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial Black,Arial,sans-serif' font-weight='900' font-size='19' fill='%230E0E0F'%3EMK%3C/text%3E%3C/svg%3E">
 <link rel="preload" href="assets/fonts/syne.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
-<script>
-/* apply a saved theme before first paint so there is no flash */
-(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Person","@id":"https://klimanskiy1.github.io/#me","name":"Matvey Klimanskiy","jobTitle":"Full-stack developer","email":"mailto:klimanskiymatvey@gmail.com","url":"https://klimanskiy1.github.io/","address":{"@type":"PostalAddress","addressLocality":"Nha Trang","addressCountry":"VN"},"sameAs":["https://github.com/klimanskiy1","https://www.linkedin.com/in/klimanskiy-m","https://t.me/matew_1"]},
+ {"@type":"Service","name":"Website rebuild","description":"Rebuild of an outdated small-business website as a fast static site, within a week, with a working preview before payment.","provider":{"@id":"https://klimanskiy1.github.io/#me"},"areaServed":"Worldwide","serviceType":"Web development"}
+]}
 </script>
 <style>
 @font-face{font-family:'Instrument Sans';font-style:italic;font-weight:400;font-display:swap;src:url(assets/fonts/instrument-sans-400-italic.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
@@ -29,48 +32,34 @@
 @font-face{font-family:'Syne';font-style:normal;font-weight:700 800;font-display:swap;src:url(assets/fonts/syne.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 
 :root{
-  --bg:#F7F6F3;
-  --bg-2:#EFEEEA;
-  --ink:#121212;
-  --ink-2:#45443F;
-  --mute:#767570;
-  --line:#D9D8D2;
-  --line-2:#BDBCB5;
-  --accent:#2A44E0;
-  --accent-soft:#E4E8FB;
-  --ok:#1F7A4D;
-  --frame:#1C1C1C;
-  --contact-bg:#121212;
-  --contact-ink:#F7F6F3;
-  color-scheme:light;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#0F0F10;--bg-2:#161617;--ink:#EDECE8;--ink-2:#BDBCB6;--mute:#8A8984;
-    --line:#2A2A2C;--line-2:#3B3B3E;--accent:#93A5FF;--accent-soft:#1B2246;--ok:#6FCB99;--frame:#000;
-    --contact-bg:#050506;--contact-ink:#EDECE8;color-scheme:dark;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#0F0F10;--bg-2:#161617;--ink:#EDECE8;--ink-2:#BDBCB6;--mute:#8A8984;
-  --line:#2A2A2C;--line-2:#3B3B3E;--accent:#93A5FF;--accent-soft:#1B2246;--ok:#6FCB99;--frame:#000;
-  --contact-bg:#050506;--contact-ink:#EDECE8;color-scheme:dark;
+  --bg:#0E0E0F;
+  --bg-2:#151516;
+  --ink:#EDECE8;
+  --ink-2:#BDBCB6;
+  --mute:#8E8D87;
+  --line:#2A2A2C;
+  --line-2:#3D3D40;
+  --accent:#9DB0FF;
+  --accent-ink:#0E0E0F;
+  --ok:#6FCB99;
+  --warn:#E0A526;
+  --frame:#000;
+  color-scheme:dark;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 body{
   font-family:'Instrument Sans',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
   background:var(--bg);color:var(--ink);line-height:1.55;font-size:17px;
   -webkit-font-smoothing:antialiased;overflow-x:hidden;
-  font-feature-settings:"ss01","cv01";
 }
 img{max-width:100%;display:block;height:auto}
 a{color:inherit;text-decoration:none}
 h1,h2,h3{font-family:'Syne','Instrument Sans',system-ui,sans-serif;font-weight:700;line-height:1.08;letter-spacing:0;text-wrap:balance}
-p a,li a,dd a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:var(--line-2)}
-p a:hover,li a:hover,dd a:hover{text-decoration-color:var(--accent);color:var(--accent)}
+p a,li a,dd a,td a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:var(--mute)}
+p a:hover,li a:hover,dd a:hover,td a:hover{text-decoration-color:var(--accent);color:var(--accent)}
 code{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:.9em}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .wrap{width:min(1240px,100% - 48px);margin-inline:auto}
@@ -78,94 +67,141 @@ code{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:.9em}
 .skip{position:absolute;left:16px;top:-60px;z-index:100;background:var(--ink);color:var(--bg);padding:10px 14px;font-weight:600}
 .skip:focus{top:12px}
 .label{font-size:.78rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
-.num{font-variant-numeric:tabular-nums}
 
 /* ---------- header ---------- */
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:58px;gap:16px}
-.brand{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;letter-spacing:0;white-space:nowrap}
+.brand{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;white-space:nowrap}
 .clock{font-size:.82rem;color:var(--mute);text-align:center;white-space:nowrap;font-variant-numeric:tabular-nums}
 .links{display:flex;justify-content:flex-end;align-items:center;gap:22px;font-size:.9rem;font-weight:500}
-.links a{position:relative;padding:2px 0;color:var(--ink-2)}
+.links a{padding:2px 0;color:var(--ink-2)}
 .links a:hover{color:var(--ink)}
-.theme{width:34px;height:34px;border:1px solid var(--line-2);border-radius:50%;background:transparent;color:var(--ink);cursor:pointer;display:grid;place-items:center;margin-left:4px}
-.theme svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
-.theme .sun{display:none}
-.nav > .theme{display:none}
-:root[data-theme="dark"] .theme .sun{display:block}
-:root[data-theme="dark"] .theme .moon{display:none}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .theme .sun{display:block}:root:not([data-theme="light"]) .theme .moon{display:none}}
+.pill{border:1px solid var(--line-2);border-radius:999px;padding:7px 14px;color:var(--ink);white-space:nowrap}
+.pill:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.nav > .pill{display:none}
 @media(max-width:900px){
-  .nav{grid-template-columns:1fr auto;height:auto;padding-block:12px 0;row-gap:6px}
+  .nav{grid-template-columns:1fr auto;height:auto;padding-block:10px 0;row-gap:2px}
   .clock{display:none}
-  .links{grid-column:1/-1;justify-content:flex-start;gap:18px;overflow-x:auto;scrollbar-width:none;padding-bottom:12px;font-size:.86rem;white-space:nowrap}
-  .links::-webkit-scrollbar{display:none}
-  .links .theme{display:none}
-  .nav > .theme{display:grid;grid-row:1;grid-column:2}
-  .links{grid-row:2}
+  .nav > .pill{display:inline-block;font-size:.86rem;padding:7px 13px;grid-row:1;grid-column:2;justify-self:end}
+  .links{grid-row:2;grid-column:1/-1;justify-content:flex-start;gap:16px;padding:6px 0 10px;font-size:.86rem;flex-wrap:wrap}
+  .links .pill{display:none}
 }
 
 /* ---------- hero ---------- */
-.hero{padding-block:clamp(56px,10vw,132px) clamp(40px,6vw,80px)}
-.hero h1{font-size:clamp(2.2rem,5.2vw,4.8rem);letter-spacing:-.01em;line-height:1.06;max-width:20ch;margin:18px 0 clamp(32px,5vw,64px)}
+.hero{padding-block:clamp(56px,9vw,120px) clamp(40px,6vw,72px)}
+.hero h1{font-size:clamp(2.1rem,5vw,4.6rem);letter-spacing:-.01em;line-height:1.06;max-width:21ch;margin:18px 0 clamp(24px,3vw,36px)}
 .hero h1 span{color:var(--mute)}
 .hero-cols{display:grid;grid-template-columns:7fr 5fr;gap:clamp(28px,5vw,80px);align-items:start}
 @media(max-width:820px){.hero-cols{grid-template-columns:1fr}}
-.lead{font-size:clamp(1.1rem,1.6vw,1.3rem);line-height:1.5;color:var(--ink-2);max-width:52ch}
-.lead+.lead{margin-top:1em}
-.vitals{display:grid;grid-template-columns:auto 1fr;gap:10px 24px;font-size:.95rem;border-top:1px solid var(--ink);padding-top:14px;align-content:start}
+.lead{font-size:clamp(1.08rem,1.5vw,1.25rem);line-height:1.5;color:var(--ink-2);max-width:54ch}
+.lead b{color:var(--ink);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:clamp(22px,3vw,32px)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:999px;font-size:.95rem;font-weight:600;border:1px solid var(--line-2);color:var(--ink);transition:background .2s,color .2s,border-color .2s}
+.btn:hover{border-color:var(--ink)}
+.btn-fill{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn-fill:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.fine{font-size:.95rem;color:var(--ink-2);margin-top:16px;max-width:54ch}
+.addr{font-size:.9rem;color:var(--mute);margin-top:10px}
+.addr a{color:var(--ink-2)}
+.vitals{display:grid;grid-template-columns:auto 1fr;gap:10px 24px;font-size:.95rem;border-top:1px solid var(--ink);padding-top:16px;align-content:start}
 .vitals dt{color:var(--mute);font-weight:500}
-.vitals dd{color:var(--ink)}
+.vitals .who{grid-column:1/-1;display:flex;align-items:center;gap:14px;padding-bottom:6px}
+.vitals .who img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:1px solid var(--line-2)}
+.vitals .who b{display:block;font-family:'Syne',sans-serif;font-weight:700}
+.vitals .who span{font-size:.88rem;color:var(--mute)}
 .vitals .now{display:inline-flex;align-items:flex-start;gap:8px}
-.vitals .dot{margin-top:.55em}
-.dot{width:7px;height:7px;border-radius:50%;background:var(--ok);flex:none}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--ok);flex:none;margin-top:.55em}
 @media (prefers-reduced-motion:no-preference){.dot{animation:pulse 2.6s infinite}}
 @keyframes pulse{50%{opacity:.35}}
-.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:clamp(24px,3vw,36px)}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;font-size:.92rem;font-weight:600;border:1px solid var(--ink);color:var(--ink);transition:background .2s,color .2s}
-.btn:hover{background:var(--ink);color:var(--bg)}
-.btn-fill{background:var(--ink);color:var(--bg)}
-.btn-fill:hover{background:var(--accent);border-color:var(--accent);color:#fff}
-.btn svg{width:15px;height:15px;flex:none}
+.proofline{margin-top:clamp(36px,5vw,64px);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;display:flex;flex-wrap:wrap;gap:8px 32px;font-size:.92rem;color:var(--ink-2)}
+.proofline b{color:var(--ink);font-weight:600}
 
 /* ---------- section scaffolding ---------- */
 section{padding-block:clamp(56px,9vw,120px)}
 .sec{display:grid;grid-template-columns:3fr 9fr;gap:24px clamp(24px,4vw,64px);align-items:start}
 @media(max-width:820px){.sec{grid-template-columns:1fr}}
+.sec > *{min-width:0}
 .sec-side{position:sticky;top:calc(58px + env(safe-area-inset-top,0px) + 24px)}
 @media(max-width:820px){.sec-side{position:static}}
-.sec-side h2{font-size:clamp(1.5rem,2.4vw,2rem);font-weight:700;letter-spacing:0;margin-top:6px}
+.sec-side h2{font-size:clamp(1.5rem,2.4vw,2rem);margin-top:6px}
 .sec-side p{color:var(--ink-2);font-size:.98rem;margin-top:14px;max-width:32ch}
 .sec-side .label{display:block}
 
-/* ---------- featured cases ---------- */
+/* ---------- cases ---------- */
 .cases{display:grid;gap:clamp(48px,7vw,104px)}
-.case .shot{position:relative;background:var(--frame);padding:8px;border-radius:6px}
+.case .shot{position:relative;background:var(--frame);padding:8px;border-radius:6px;border:1px solid var(--line)}
 .case .shot img{aspect-ratio:1440/900;object-fit:cover;object-position:top;width:100%;border-radius:3px}
-.case .shot .phone{position:absolute;right:clamp(10px,2.5vw,28px);bottom:-22px;width:19%;min-width:88px;background:var(--frame);padding:6px 4px;border-radius:12px;box-shadow:0 20px 40px -16px rgba(0,0,0,.6)}
+.case .shot .phone{position:absolute;right:clamp(10px,2.5vw,28px);bottom:-22px;width:19%;min-width:88px;background:var(--frame);padding:6px 4px;border-radius:12px;border:1px solid var(--line-2);box-shadow:0 20px 40px -16px rgba(0,0,0,.9)}
 .case .shot .phone img{aspect-ratio:390/844;border-radius:8px;object-position:top}
 .case .cap{display:grid;grid-template-columns:5fr 7fr;gap:16px clamp(24px,4vw,56px);margin-top:34px}
 @media(max-width:820px){.case .cap{grid-template-columns:1fr}}
-.case h3{font-size:clamp(1.4rem,2.4vw,2rem);font-weight:700;letter-spacing:0;line-height:1.1}
-.case .sub{color:var(--mute);font-size:.9rem;margin-top:8px}
-.case .status{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;font-weight:500;margin-top:14px;color:var(--ink-2)}
+.case h3{font-size:clamp(1.4rem,2.4vw,2rem);line-height:1.1}
+.case .sub{color:var(--ink-2);font-size:.92rem;margin-top:8px}
+.case .status{display:inline-flex;align-items:center;gap:8px;font-size:.86rem;font-weight:500;margin-top:14px;color:var(--ink-2)}
 .case .status::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--line-2)}
-.case .status.live::before{background:var(--ok)}
-.case .status.wip::before{background:#E0A526}
-.case .status.prop::before{background:var(--accent)}
+.case .status.review::before{background:var(--warn)}
 .case .body p{color:var(--ink-2);max-width:60ch}
 .case .body p+p{margin-top:.8em}
-.case .meta{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:18px;font-size:.88rem;color:var(--mute)}
-.case .meta b{color:var(--ink);font-weight:600}
 .case .go{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:18px;font-size:.92rem;font-weight:600}
-.case .go a{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:var(--line-2)}
+.case .go a{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:var(--mute)}
 .case .go a:hover{color:var(--accent);text-decoration-color:var(--accent)}
+/* before / after */
+.ba{margin-top:20px;border:1px solid var(--line);border-radius:6px;overflow-x:auto;font-size:.9rem}
+.ba table{width:100%;border-collapse:collapse}
+.ba caption{caption-side:bottom;text-align:left;font-size:.82rem;color:var(--mute);padding:8px 12px;border-top:1px solid var(--line)}
+.ba th,.ba td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;white-space:nowrap}
+.ba tbody tr:last-child td,.ba tbody tr:last-child th{border-bottom:0}
+.ba thead th{font-weight:500;color:var(--mute);font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;background:var(--bg-2)}
+.ba tbody th{font-weight:400;color:var(--ink-2);white-space:normal}
+.ba td.after{color:var(--ok);font-weight:600}
+.ba tr.key th,.ba tr.key td{font-size:1rem}
 
-/* ---------- index ---------- */
+/* ---------- offer ---------- */
+.offer{background:var(--bg-2);border-block:1px solid var(--line)}
+.how{counter-reset:s;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;border-top:1px solid var(--ink);padding-top:22px}
+@media(max-width:820px){.how{grid-template-columns:1fr}}
+.how li{counter-increment:s}
+.how li::before{content:counter(s,decimal-leading-zero);display:block;font-family:'Syne',sans-serif;font-weight:700;font-size:1.5rem;color:var(--ink);margin-bottom:10px}
+.how b{display:block;font-weight:600;margin-bottom:6px;font-size:1.05rem}
+.how p{font-size:.95rem;color:var(--ink-2);line-height:1.5}
+.terms{margin-top:clamp(36px,5vw,64px);border-top:1px solid var(--ink)}
+.terms dl{display:grid;grid-template-columns:repeat(3,1fr);gap:24px clamp(20px,3vw,40px);padding-top:22px}
+@media(max-width:820px){.terms dl{grid-template-columns:1fr}}
+.terms dt{font-weight:600;padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:12px}
+.terms dd{color:var(--ink-2);font-size:.95rem}
+.terms dd+dd{margin-top:8px}
+.offer .cta{margin-top:clamp(32px,5vw,56px)}
+
+/* ---------- faq ---------- */
+.faq{border-top:1px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:baseline;padding:18px 0;font-weight:600;font-size:1.05rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:'Syne',sans-serif;font-weight:700;font-size:1.3rem;color:var(--mute);flex:none;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq summary:hover{color:var(--accent)}
+.faq .a{padding:0 0 20px;color:var(--ink-2);max-width:62ch}
+.faq .a p+p{margin-top:.6em}
+.faq .a img{float:left;width:72px;height:72px;border-radius:50%;object-fit:cover;margin:4px 16px 8px 0;border:1px solid var(--line-2)}
+
+/* ---------- contact ---------- */
+.contact{background:#050506;border-top:1px solid var(--line);padding-block:clamp(64px,10vw,140px) clamp(40px,6vw,80px)}
+.contact h2{font-size:clamp(2.1rem,5.4vw,5rem);letter-spacing:-.01em;line-height:1.06;max-width:16ch}
+.contact .after{margin-top:clamp(28px,4vw,48px);display:grid;grid-template-columns:5fr 7fr;gap:24px clamp(24px,4vw,64px);align-items:end}
+@media(max-width:820px){.contact .after{grid-template-columns:1fr}}
+.contact p{color:var(--ink-2);max-width:44ch;font-size:1.05rem}
+.contact .cta{margin-top:20px}
+.c-list{display:grid}
+.c-list a{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 0;border-top:1px solid var(--line);font-family:'Syne',sans-serif;font-weight:700;font-size:1.15rem;transition:padding .2s,color .2s}
+.c-list a:last-child{border-bottom:1px solid var(--line)}
+.c-list a span{font-family:'Instrument Sans',sans-serif;font-weight:400;font-size:.9rem;color:var(--mute);text-align:right}
+.c-list a:hover{padding-left:10px;color:var(--accent)}
+
+/* ---------- index (developer section) ---------- */
 .index{border-top:1px solid var(--ink)}
 .row{display:grid;grid-template-columns:minmax(0,2.1fr) minmax(0,3.2fr) minmax(0,2fr) minmax(0,1.3fr) 20px;gap:16px 24px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line);position:relative;color:inherit;transition:background .15s}
 a.row:hover{background:var(--bg-2);margin-inline:-14px;padding-inline:14px}
-.row .name{font-family:'Syne',sans-serif;font-weight:700;font-size:1.02rem;letter-spacing:0}
+.row .name{font-family:'Syne',sans-serif;font-weight:700;font-size:1.02rem}
 .row .what{color:var(--ink-2);font-size:.95rem}
 .row .tech{color:var(--mute);font-size:.86rem}
 .row .kind{color:var(--mute);font-size:.86rem;white-space:nowrap}
@@ -181,74 +217,44 @@ a.row:hover .arrow{transform:translate(3px,-3px);color:var(--accent)}
   .row .arrow{display:none}
   .row.head{display:none}
 }
-.peek{position:fixed;z-index:60;width:min(380px,40vw);pointer-events:none;opacity:0;transform:translateY(6px) scale(.98);transition:opacity .18s,transform .18s;background:var(--frame);padding:5px;border-radius:5px;box-shadow:0 24px 60px -20px rgba(0,0,0,.55)}
+.hover-only{display:none}
+@media(hover:hover) and (min-width:901px){.hover-only{display:inline}}
+.peek{position:fixed;z-index:60;width:min(380px,40vw);pointer-events:none;opacity:0;transform:translateY(6px) scale(.98);transition:opacity .18s,transform .18s;background:var(--frame);padding:5px;border-radius:5px;border:1px solid var(--line-2);box-shadow:0 24px 60px -20px rgba(0,0,0,.9)}
 .peek img{aspect-ratio:1440/900;object-fit:cover;object-position:top;border-radius:2px}
 .peek.on{opacity:1;transform:none}
 @media(max-width:900px),(hover:none){.peek{display:none}}
 
-/* ---------- method ---------- */
-.method{background:var(--bg-2);border-block:1px solid var(--line)}
-.steps{counter-reset:s;list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:24px;border-top:1px solid var(--ink);padding-top:22px}
-@media(max-width:1000px){.steps{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.steps{grid-template-columns:1fr}}
-.steps li{counter-increment:s}
-.steps li::before{content:counter(s,decimal-leading-zero);display:block;font-family:'Syne',sans-serif;font-weight:700;font-size:1.5rem;letter-spacing:0;color:var(--ink);margin-bottom:10px}
-.steps b{display:block;font-weight:600;margin-bottom:4px}
-.steps p{font-size:.9rem;color:var(--ink-2);line-height:1.45}
-.beliefs{display:grid;grid-template-columns:1fr 1fr;gap:28px clamp(24px,4vw,56px);margin-top:clamp(40px,6vw,72px)}
+/* ---------- principles ---------- */
+.beliefs{display:grid;grid-template-columns:1fr 1fr;gap:28px clamp(24px,4vw,56px);border-top:1px solid var(--ink);padding-top:22px}
 @media(max-width:820px){.beliefs{grid-template-columns:1fr}}
 .beliefs p{color:var(--ink-2);max-width:56ch}
 .beliefs b{color:var(--ink);font-weight:600}
-.terms{margin-top:clamp(40px,6vw,72px);border-top:1px solid var(--ink)}
-.terms h3{font-size:clamp(1.3rem,2vw,1.6rem);padding:20px 0 8px}
-.terms dl{display:grid;grid-template-columns:repeat(3,1fr);gap:24px clamp(20px,3vw,40px);padding-top:8px}
-@media(max-width:820px){.terms dl{grid-template-columns:1fr}}
-.terms dt{font-weight:600;padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:12px}
-.terms dd{color:var(--ink-2);font-size:.95rem}
-.terms dd+dd{margin-top:8px}
-
-/* ---------- stack ---------- */
-.stackline{display:grid;grid-template-columns:repeat(4,1fr);gap:20px 32px;border-top:1px solid var(--ink);padding-top:20px}
+.stackline{display:grid;grid-template-columns:repeat(4,1fr);gap:20px 32px;border-top:1px solid var(--line);padding-top:20px;margin-top:clamp(32px,4vw,48px)}
 @media(max-width:820px){.stackline{grid-template-columns:1fr 1fr}}
 .stackline .label{display:block;margin-bottom:8px}
 .stackline p{font-size:.95rem;color:var(--ink-2)}
 
-/* ---------- contact ---------- */
-.contact{background:var(--contact-bg);color:var(--contact-ink);padding-block:clamp(64px,10vw,140px) clamp(32px,5vw,56px)}
-.contact h2{font-size:clamp(2.2rem,5.6vw,5.2rem);letter-spacing:-.01em;line-height:1.06;max-width:15ch}
-.contact .after{margin-top:clamp(28px,4vw,48px);display:grid;grid-template-columns:5fr 7fr;gap:24px clamp(24px,4vw,64px);align-items:end}
-@media(max-width:820px){.contact .after{grid-template-columns:1fr}}
-.contact p{color:color-mix(in srgb,var(--contact-ink) 72%,transparent);max-width:44ch;font-size:1.05rem}
-.c-list{display:grid}
-.c-list a{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 0;border-top:1px solid color-mix(in srgb,var(--contact-ink) 20%,transparent);font-family:'Syne',sans-serif;font-weight:700;font-size:1.15rem;transition:padding .2s,color .2s}
-.c-list a:last-child{border-bottom:1px solid color-mix(in srgb,var(--contact-ink) 20%,transparent)}
-.c-list a span{font-family:'Instrument Sans',sans-serif;font-weight:400;font-size:.9rem;color:color-mix(in srgb,var(--contact-ink) 60%,transparent);text-align:right}
-.c-list a:hover{padding-left:10px;color:var(--accent)}
-.site-footer{background:var(--contact-bg);color:color-mix(in srgb,var(--contact-ink) 55%,transparent);padding-bottom:calc(22px + env(safe-area-inset-bottom,0px))}
-.site-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:.82rem;border-top:1px solid color-mix(in srgb,var(--contact-ink) 12%,transparent);padding-top:18px}
+/* ---------- footer ---------- */
+.site-footer{background:var(--bg);color:var(--mute);padding-block:28px calc(24px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line)}
+.site-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 24px;font-size:.86rem;align-items:center}
+.site-footer a{color:var(--ink-2)}
 </style>
 </head>
 <body>
-<a class="skip" href="#work">Skip to the work</a>
+<a class="skip" href="#top">Skip to content</a>
 
 <header class="top">
   <div class="wrap nav">
     <a class="brand" href="#top">Matvey Klimanskiy</a>
     <div class="clock" id="clock" aria-live="off">Nha Trang</div>
     <nav class="links" aria-label="Sections">
-      <a href="#work">Work</a>
-      <a href="#more">Index</a>
-      <a href="#method">How I work</a>
-      <a href="#contact">Contact</a>
-      <button class="theme" type="button" aria-label="Toggle colour theme" aria-pressed="false" data-theme-toggle>
-        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
-        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-      </button>
+      <a href="#work">Rebuilds</a>
+      <a href="#offer">How it works</a>
+      <a href="#faq">Questions</a>
+      <a href="#more">Products</a>
+      <a class="pill" href="mailto:klimanskiymatvey@gmail.com?subject=Free%20preview%20of%20my%20website&amp;body=Hi%20Matvey%2C%0A%0AMy%20current%20site%3A%20%0AWhat%20the%20business%20does%3A%20%0A%0AThanks">Get a free preview</a>
     </nav>
-    <button class="theme" type="button" aria-label="Toggle colour theme" aria-pressed="false" data-theme-toggle>
-      <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
-      <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-    </button>
+    <a class="pill" href="mailto:klimanskiymatvey@gmail.com?subject=Free%20preview%20of%20my%20website&amp;body=Hi%20Matvey%2C%0A%0AMy%20current%20site%3A%20%0AWhat%20the%20business%20does%3A%20%0A%0AThanks">Free preview</a>
   </div>
 </header>
 
@@ -258,110 +264,149 @@ a.row:hover .arrow{transform:translate(3px,-3px);color:var(--accent)}
 <section class="hero">
   <div class="wrap">
     <span class="label">Full-stack developer, Nha Trang, Vietnam</span>
-    <h1>I rebuild outdated websites for real businesses, <span>and build products of my own.</span></h1>
+    <h1>Your outdated website, rebuilt within a week. <span>Same pages, same prices, a site that loads on a phone.</span></h1>
     <div class="hero-cols">
       <div>
-        <p class="lead">Right now that means static, hand-tuned rebuilds for dive centres in Vietnam and Miami, and two products in development: a teammate platform for Rust and an anonymous-conversations app.</p>
-        <p class="lead">Started on the backend; the front end came from needing sites that load on a phone in a resort with weak Wi-Fi.</p>
+        <p class="lead">I take the site you already have, whether it is WordPress, Wix or a page builder from 2012, keep every page, price and photo, and rebuild it as a plain, fast site you own outright, with no page builder and no subscription behind it. <b>You see a working preview before you pay anything.</b></p>
         <div class="cta">
-          <a class="btn btn-fill" href="mailto:klimanskiymatvey@gmail.com">Email me</a>
-          <a class="btn" href="https://t.me/matew_1" target="_blank" rel="noopener">Telegram</a>
-          <a class="btn" href="https://github.com/klimanskiy1" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-fill" href="mailto:klimanskiymatvey@gmail.com?subject=Free%20preview%20of%20my%20website&amp;body=Hi%20Matvey%2C%0A%0AMy%20current%20site%3A%20%0AWhat%20the%20business%20does%3A%20%0A%0AThanks">Get a free preview of your site</a>
+          <a class="btn" href="#work">See rebuilds ↓</a>
         </div>
+        <p class="fine">Send the address of your current site. Within a week you get a private link to the rebuilt version, every page included. Like it, and we put it live on your domain. Don't, and you owe nothing.</p>
+        <p class="addr">Or write directly: <a href="mailto:klimanskiymatvey@gmail.com">klimanskiymatvey@gmail.com</a> · <a href="https://t.me/matew_1" target="_blank" rel="noopener">Telegram @matew_1</a></p>
       </div>
       <dl class="vitals">
-        <dt>Now</dt><dd><span class="now"><span class="dot"></span>Dive-centre rebuilds, WipeSquad, MeToo</span></dd>
-        <dt>Done</dt><dd>6 full site rebuilds, 200+ generated pages, 5 languages</dd>
-        <dt>Stack</dt><dd>TypeScript, Python, Go, PostgreSQL, Redis, Docker</dd>
-        <dt>Works</dt><dd>Remotely from Nha Trang, in English or Russian</dd>
-        <dt>Reach</dt><dd><a href="mailto:klimanskiymatvey@gmail.com">klimanskiymatvey@gmail.com</a></dd>
+        <div class="who"><img src="assets/img/avatar.jpg" alt="Matvey Klimanskiy" width="56" height="56"><div><b>Matvey Klimanskiy</b><span>One person, no agency. Nha Trang, works remotely.</span></div></div>
+        <dt>Now</dt><dd><span class="now"><span class="dot"></span>Taking rebuilds; four owners are reviewing previews</span></dd>
+        <dt>Turnaround</dt><dd>Within a week for a typical 30–40 page site</dd>
+        <dt>You pay</dt><dd>One price for the rebuild, quoted with the preview. Nothing before that.</dd>
+        <dt>To run it</dt><dd>Plain HTML, typically $0 a month</dd>
+        <dt>Languages</dt><dd>English or Russian, same-day replies</dd>
       </dl>
     </div>
+    <div class="proofline"><span><b>5</b> full rebuilds so far</span><span><b>200+</b> pages rebuilt</span><span><b>5</b> languages served</span><span><b>2–25×</b> lighter home pages, measured</span><span><b>0</b> plugins to update</span></div>
   </div>
 </section>
 
-<!-- ================= SELECTED WORK ================= -->
+<!-- ================= REBUILDS ================= -->
 <section id="work">
   <div class="wrap sec">
     <div class="sec-side">
-      <span class="label">Selected work</span>
-      <h2>Four things worth a closer look</h2>
-      <p>Two rebuilds the owners are reviewing, a product in active development, and the largest proposal so far.</p>
+      <span class="label">Rebuilds</span>
+      <h2>Real businesses, before and after</h2>
+      <p>Each one rebuilt from the live site with nothing invented. The numbers are the home page on a phone, uncached, measured in September 2026.</p>
+      <p>None of these is on the owner's domain yet; the owners are reviewing previews. That is why the preview is free: judge the work, not my track record.</p>
     </div>
     <div class="cases">
 
       <article class="case">
         <div class="shot">
-          <img src="assets/img/rainbow-divers.webp" alt="Rainbow Divers Vietnam home page: “Vietnam's longest-established dive centre” over an underwater photo" width="1440" height="900">
+          <img src="assets/img/rainbow-divers.webp" srcset="assets/img/rainbow-divers-720.webp 720w, assets/img/rainbow-divers.webp 1440w" sizes="(max-width: 820px) 100vw, 900px" alt="Rainbow Divers Vietnam home page: “Vietnam's longest-established dive centre” over an underwater photo" width="1440" height="900">
           <div class="phone"><img src="assets/img/rainbow-divers-m.webp" alt="Rainbow Divers on a phone" loading="lazy" width="390" height="844"></div>
         </div>
         <div class="cap">
           <div>
             <h3>Rainbow Divers Vietnam</h3>
             <div class="sub">divevietnam.com · PADI flagship, Nha Trang, since 1996</div>
-            <div class="status live">Live preview, with the owner for review</div>
+            <div class="status review">Preview sent, owner reviewing</div>
+            <div class="ba"><table>
+              <caption>Home page on a phone, uncached, slow 4G. September 2026.</caption>
+              <thead><tr><th scope="col">Home page</th><th scope="col">Current site</th><th scope="col">Rebuilt</th></tr></thead>
+              <tbody>
+                <tr class="key"><th scope="row">Fully loaded on slow 4G</th><td>12.4 s</td><td class="after">6.6 s</td></tr>
+                <tr><th scope="row">Weight</th><td>3.5 MB</td><td class="after">1.9 MB</td></tr>
+                <tr><th scope="row">Requests</th><td>64</td><td class="after">23</td></tr>
+                <tr><th scope="row">Scripts</th><td>14</td><td class="after">3</td></tr>
+              </tbody>
+            </table></div>
           </div>
           <div class="body">
-            <p>A rebuild of the current site with nothing invented: six dive centres, the full PADI ladder from Discover Scuba to Master Instructor, conservation and group packages. 35 pages in four languages, 123 photos from the existing site, sitemap and robots written by the generator.</p>
-            <div class="meta"><span><b>35</b> pages</span><span><b>4</b> languages</span><span><b>123</b> photos</span><span><b>$0</b>/month hosting</span></div>
-            <div class="go"><a href="https://klimanskiy1.github.io/rainbow-divers-vietnam/" target="_blank" rel="noopener">Open the site ↗</a><a href="https://github.com/klimanskiy1/rainbow-divers-vietnam" target="_blank" rel="noopener">Repository ↗</a></div>
+            <p>Six dive centres, the full PADI ladder from Discover Scuba to Master Instructor, conservation and group packages. 35 pages in four languages, 123 photos from the existing site, plus the files Google needs to index it.</p>
+            <div class="go"><a href="https://klimanskiy1.github.io/rainbow-divers-vietnam/" target="_blank" rel="noopener">Open the rebuilt site ↗</a><a href="https://www.divevietnam.com/" target="_blank" rel="noopener">Current site ↗</a></div>
           </div>
         </div>
       </article>
 
       <article class="case">
         <div class="shot">
-          <img src="assets/img/sailing-club.webp" alt="Sailing Club Divers home page with an ocean-blue hero" loading="lazy" width="1440" height="900">
+          <img src="assets/img/sailing-club.webp" srcset="assets/img/sailing-club-720.webp 720w, assets/img/sailing-club.webp 1440w" sizes="(max-width: 820px) 100vw, 900px" alt="Sailing Club Divers home page with an ocean-blue hero" loading="lazy" width="1440" height="900">
           <div class="phone"><img src="assets/img/sailing-club-m.webp" alt="Sailing Club Divers on a phone" loading="lazy" width="390" height="844"></div>
         </div>
         <div class="cap">
           <div>
             <h3>Sailing Club Divers</h3>
             <div class="sub">sailingclubdivers.com · Nha Trang · WordPress to static</div>
-            <div class="status live">Live preview, with the owner for review</div>
+            <div class="status review">Preview sent, owner reviewing</div>
+            <div class="ba"><table>
+              <caption>Home page on a phone, uncached, slow 4G. September 2026.</caption>
+              <thead><tr><th scope="col">Home page</th><th scope="col">Current site</th><th scope="col">Rebuilt</th></tr></thead>
+              <tbody>
+                <tr class="key"><th scope="row">Fully loaded on slow 4G</th><td>16.0 s</td><td class="after">3.1 s</td></tr>
+                <tr><th scope="row">Weight</th><td>9.3 MB</td><td class="after">0.6 MB</td></tr>
+                <tr><th scope="row">Requests</th><td>142</td><td class="after">12</td></tr>
+                <tr><th scope="row">Scripts</th><td>67</td><td class="after">3</td></tr>
+              </tbody>
+            </table></div>
           </div>
           <div class="body">
-            <p>Ocean theme in light and dark, five languages from a Python translation catalogue, no tracking and no cookie banner. Only the built site is published, with noindex, so the preview never competes with the live site in search.</p>
-            <div class="meta"><span><b>5</b> languages</span><span><b>360 px</b> minimum layout</span><span><b>0</b> cookies</span></div>
-            <div class="go"><a href="https://klimanskiy1.github.io/sailingclubdivers-preview/" target="_blank" rel="noopener">Open the site ↗</a></div>
+            <p>Ocean theme in light and dark, five languages, no tracking and no cookie banner. The preview is hidden from Google, so it never competes with the current site in search.</p>
+            <div class="go"><a href="https://klimanskiy1.github.io/sailingclubdivers-preview/" target="_blank" rel="noopener">Open the rebuilt site ↗</a><a href="https://sailingclubdivers.com/" target="_blank" rel="noopener">Current site ↗</a></div>
           </div>
         </div>
       </article>
 
       <article class="case">
         <div class="shot">
-          <img src="assets/img/wipesquad.webp" alt="WipeSquad landing page: “Build your squad before the wipe starts”, a force-wipe countdown and live player stats" loading="lazy" width="1440" height="900">
-          <div class="phone"><img src="assets/img/wipesquad-m.webp" alt="WipeSquad on a phone" loading="lazy" width="390" height="844"></div>
-        </div>
-        <div class="cap">
-          <div>
-            <h3>WipeSquad</h3>
-            <div class="sub">Teammate matching and clan CRM for Rust · own product</div>
-            <div class="status wip">In development since July 2026</div>
-          </div>
-          <div class="body">
-            <p>Rust servers wipe on a schedule, and every wipe you need a squad fast. WipeSquad pulls hours, bans and activity straight from Steam, so there is no “trust me, I have 3k hours”, and matches players to rooms sized for their server's group limit. Clans get recruitment rooms, a headquarters board and a wipe calendar.</p>
-            <p>Spec before code: sixteen hard rules live in the repo, a guard linter enforces them in CI, and backups count only after an actual restore.</p>
-            <div class="meta"><span>Next.js</span><span>TypeScript</span><span>PostgreSQL + Drizzle</span><span>Redis + BullMQ</span><span>WebSocket</span><span>Steam OpenID</span><span>Docker</span></div>
-          </div>
-        </div>
-      </article>
-
-      <article class="case">
-        <div class="shot">
-          <img src="assets/img/california-scuba.webp" alt="California Scuba Center home page" loading="lazy" width="1440" height="900">
+          <img src="assets/img/california-scuba.webp" srcset="assets/img/california-scuba-720.webp 720w, assets/img/california-scuba.webp 1440w" sizes="(max-width: 820px) 100vw, 900px" alt="California Scuba Center home page" loading="lazy" width="1440" height="900">
           <div class="phone"><img src="assets/img/california-scuba-m.webp" alt="California Scuba Center on a phone" loading="lazy" width="390" height="844"></div>
         </div>
         <div class="cap">
           <div>
             <h3>California Scuba Center</h3>
             <div class="sub">cascubacenter.com · dive shop, school and travel</div>
-            <div class="status prop">Proposal, built before the pitch</div>
+            <div class="status">Built unasked; the owner sees it before anyone else</div>
+            <div class="ba"><table>
+              <caption>Home page on a phone, uncached, slow 4G. September 2026.</caption>
+              <thead><tr><th scope="col">Home page</th><th scope="col">Current site</th><th scope="col">Rebuilt</th></tr></thead>
+              <tbody>
+                <tr class="key"><th scope="row">Fully loaded on slow 4G</th><td>25.1 s</td><td class="after">2.0 s</td></tr>
+                <tr><th scope="row">Weight</th><td>10.8 MB</td><td class="after">1.8 MB</td></tr>
+                <tr><th scope="row">Requests</th><td>119</td><td class="after">15</td></tr>
+                <tr><th scope="row">Scripts</th><td>55</td><td class="after">2</td></tr>
+              </tbody>
+            </table></div>
           </div>
           <div class="body">
-            <p>The whole shop catalogue, 1,277 products with real photos, brands and prices, with filters, search, sorting and pagination in plain JS. Plus 25 courses, 6 trips, 2 charters and every service price, all taken from the live site.</p>
-            <div class="meta"><span><b>1,277</b> shop items</span><span><b>25</b> courses</span><span><b>6</b> trips</span><span><b>2</b> charters</span></div>
-            <div class="go"><a href="assets/img/california-scuba.webp" target="_blank" rel="noopener">Full-size screenshot ↗</a></div>
+            <p>The whole shop catalogue, 1,277 products with real photos, brands and prices, with filters, search, sorting and pagination. Plus 25 courses, 6 trips, 2 charters and every service price, all taken from the live site. Screenshot only until the owner has seen it.</p>
+            <div class="go"><a href="assets/img/california-scuba.webp" target="_blank" rel="noopener">Full-size screenshot ↗</a><a href="https://www.cascubacenter.com/" target="_blank" rel="noopener">Current site ↗</a></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="shot">
+          <img src="assets/img/ace-diving.webp" srcset="assets/img/ace-diving-720.webp 720w, assets/img/ace-diving.webp 1440w" sizes="(max-width: 820px) 100vw, 900px" alt="Ace Diving Miami home page" loading="lazy" width="1440" height="900">
+          <div class="phone"><img src="assets/img/ace-diving-m.webp" alt="Ace Diving Miami on a phone" loading="lazy" width="390" height="844"></div>
+        </div>
+        <div class="cap">
+          <div>
+            <h3>Ace Diving Miami</h3>
+            <div class="sub">ace-diving.com · Wix to static</div>
+            <div class="status">Built unasked; the owner sees it before anyone else</div>
+            <div class="ba"><table>
+              <caption>Home page on a phone, uncached, slow 4G. September 2026.</caption>
+              <thead><tr><th scope="col">Home page</th><th scope="col">Current site</th><th scope="col">Rebuilt</th></tr></thead>
+              <tbody>
+                <tr class="key"><th scope="row">Fully loaded on slow 4G</th><td>44.8 s</td><td class="after">4.6 s</td></tr>
+                <tr><th scope="row">Weight</th><td>27.6 MB</td><td class="after">1.1 MB</td></tr>
+                <tr><th scope="row">Requests</th><td>300+</td><td class="after">17</td></tr>
+                <tr><th scope="row">Scripts</th><td>90</td><td class="after">1</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <div class="body">
+            <p>38 pages plus 10 blog posts, a 95-site dive map with a depth filter in feet and metres, team, policies and the existing FareHarbor booking links. 224 images pulled off the Wix CDN and served locally. Screenshot only until the owner has seen it.</p>
+            <div class="go"><a href="assets/img/ace-diving.webp" target="_blank" rel="noopener">Full-size screenshot ↗</a><a href="https://www.ace-diving.com/" target="_blank" rel="noopener">Current site ↗</a></div>
           </div>
         </div>
       </article>
@@ -370,102 +415,85 @@ a.row:hover .arrow{transform:translate(3px,-3px);color:var(--accent)}
   </div>
 </section>
 
-<!-- ================= INDEX ================= -->
-<section id="more" style="padding-top:0">
+<!-- ================= OFFER ================= -->
+<section id="offer" class="offer">
   <div class="wrap sec">
     <div class="sec-side">
-      <span class="label">Index</span>
-      <h2>Everything else</h2>
-      <p>Rebuilds, products and the smaller tools, in one list. Hover a row for a preview where there is one.</p>
-    </div>
-    <div class="index">
-      <div class="row head" aria-hidden="true"><span>Name</span><span>What</span><span>Stack</span><span>Kind</span><span></span></div>
-
-      <a class="row" href="assets/img/ace-diving.webp" target="_blank" rel="noopener" data-peek="assets/img/ace-diving.webp">
-        <span class="name">Ace Diving Miami</span><span class="what">47 pages and 10 posts from a Wix site, a 95-site dive map with a depth filter, 224 images served locally</span><span class="tech">Python generator, static</span><span class="kind">Proposal</span><span class="arrow">↗</span>
-      </a>
-      <a class="row" href="assets/img/squalo-divers.webp" target="_blank" rel="noopener" data-peek="assets/img/squalo-divers.webp">
-        <span class="name">Squalo Divers</span><span class="what">42 courses with category, age and text filters, 53 dive sites by type and region, 13 video testimonials</span><span class="tech">Static, one data file</span><span class="kind">Proposal</span><span class="arrow">↗</span>
-      </a>
-      <a class="row" href="assets/img/webcard.webp" target="_blank" rel="noopener" data-peek="assets/img/webcard.webp">
-        <span class="name">Maritime consultant</span><span class="what">One-page business card for a ship-management consultant, in Latvian: brass on navy, a slowly turning compass</span><span class="tech">Single HTML file</span><span class="kind">One-pager</span><span class="arrow">↗</span>
-      </a>
-      <div class="row">
-        <span class="name">MeToo</span><span class="what">Anonymous conversations between people feeling the same thing right now. Every topic starts with “Me too…” and becomes a closed room that vanishes with the conversation. Feed done, rooms next.</span><span class="tech">Expo, Fastify, Socket.IO, PostgreSQL</span><span class="kind">Product · phase 1</span><span class="arrow"></span>
-      </div>
-      <a class="row" href="https://github.com/klimanskiy1/Tutor" target="_blank" rel="noopener" data-peek="assets/img/tutor.webp">
-        <span class="name">Tutor</span><span class="what">A personal Anki on the FSRS scheduler: load any test set as JSON, answer a few a day, five card types</span><span class="tech">FastAPI, SQLite</span><span class="kind">Product · shipped</span><span class="arrow">↗</span>
-      </a>
-      <div class="row">
-        <span class="name">Auto-Red</span><span class="what">Lead pipeline for outdated websites: discover, audit with Playwright, mockup, outreach, CRM. How the proposals above get found.</span><span class="tech">Node, Playwright, IMAP/SMTP</span><span class="kind">Internal tool</span><span class="arrow"></span>
-      </div>
-      <a class="row" href="https://github.com/klimanskiy1/shortener-service" target="_blank" rel="noopener">
-        <span class="name">shortener-service</span><span class="what">URL shortener with a Docker setup and an isolated test database from the same compose file</span><span class="tech">FastAPI, PostgreSQL, Pytest</span><span class="kind">Open source · ★ 3</span><span class="arrow">↗</span>
-      </a>
-      <a class="row" href="https://github.com/klimanskiy1/htpy-cli-app" target="_blank" rel="noopener">
-        <span class="name">ReqPy CLI</span><span class="what">The part of Postman you actually use, in the terminal: <code>reqpy send GET example.com</code>, headers, JSON bodies, timing</span><span class="tech">Python, Click, Requests</span><span class="kind">Open source</span><span class="arrow">↗</span>
-      </a>
-      <a class="row" href="https://github.com/klimanskiy1/WardenV2" target="_blank" rel="noopener">
-        <span class="name">WardenV2</span><span class="what">Watches Avito listings and pushes new ones to Telegram; SHA-256 dedup in Redis with a two-day TTL</span><span class="tech">asyncio, Redis, aiogram</span><span class="kind">Open source</span><span class="arrow">↗</span>
-      </a>
-      <a class="row" href="https://github.com/klimanskiy1/fastapi-shop" target="_blank" rel="noopener">
-        <span class="name">fastapi-shop</span><span class="what">Backend for an electronics store: products, carts, orders, Pydantic schemas, tests. Where the FastAPI habits started.</span><span class="tech">FastAPI, SQLAlchemy, PostgreSQL</span><span class="kind">Open source · ★ 1</span><span class="arrow">↗</span>
-      </a>
-      <a class="row" href="https://github.com/klimanskiy1/capcut-friend" target="_blank" rel="noopener">
-        <span class="name">capcut-friend</span><span class="what">Telegram bot selling paid CapCut video-editing training, with a real payments flow</span><span class="tech">aiogram, SQLAlchemy, PostgreSQL</span><span class="kind">Open source</span><span class="arrow">↗</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= METHOD ================= -->
-<section id="method" class="method">
-  <div class="wrap sec">
-    <div class="sec-side">
-      <span class="label">How I work</span>
-      <h2>The same path for a site and for a product</h2>
-      <p>Understand what exists, write it down as data and rules, build, check, ship. AI coding agents do a lot of the typing; their output is a pull request from someone else, never finished work.</p>
+      <span class="label">How it works</span>
+      <h2>Preview first, pay after</h2>
+      <p>The preview is the actual site, not a mockup. If you like it, the only thing left is putting it on your domain.</p>
     </div>
     <div>
-      <ol class="steps">
-        <li><b>Audit</b><p>For a site: every page, price, course, photo and link of the live one. For a product: the problem, the scenarios, the risks, written down before code.</p></li>
-        <li><b>Spec</b><p>Text and prices go into data files, the schema into migrations, the red lines into a decision log. Pages and endpoints are written by code.</p></li>
-        <li><b>Build</b><p>Site builders in Python, backends in TypeScript or Python. Coding agents get a narrow brief and a scoped task, not the whole repo.</p></li>
-        <li><b>Verify</b><p>Guard linter and hooks run in CI, tests hit a real database, and a separate security pass only reports findings. It never patches.</p></li>
-        <li><b>Ship</b><p>A green check does not replace looking at the result. Then a static host, or a VPS behind Docker with a backup that has been restored at least once.</p></li>
+      <ol class="how">
+        <li><b>Send me your site's address</b><p>One email or Telegram message. No call to start, no brief, no access to anything. I build from what is already public.</p></li>
+        <li><b>Get a private preview within a week</b><p>Every page, price, course and photo carried over into a new design that works on a phone. You click through it like the real thing.</p></li>
+        <li><b>Go live, or walk away</b><p>Corrections as a list or a voice note, then it goes on your domain. You pay at this point. Not interested? The preview stays private and you owe nothing.</p></li>
       </ol>
 
-      <div class="beliefs">
-        <p><b>Nothing gets invented.</b> A rebuilt site carries the business's own text, prices, courses and photos 1:1. The design changes; the facts do not. If the original lists 95 dive sites, the new one lists 95 dive sites.</p>
-        <p><b>Content as data, pages as code.</b> Every site ships with a small generator: change a price in one file and every page, language and sitemap follows. No page builder, no plugins, no database to keep alive.</p>
-        <p><b>A rule that exists only in prose is a suggestion.</b> In my own products the constraints live in a guard linter and pre-commit hooks, mirrored in CI. WipeSquad has sixteen of them, from “identity comes only from the server session” to “no copyleft in server code”.</p>
-        <p><b>Agents type; I accept.</b> I use coding agents heavily and say so. They never review their own output, a security pass runs separately, and CI actions are pinned by commit SHA with read-only tokens, because build steps run third-party code next to your credentials.</p>
+      <div class="terms">
+        <dl>
+          <div><dt>What you get</dt><dd>Every page, price, course and photo of your current site, carried over exactly.</dd><dd>A new design in light and dark, built for phones first.</dd><dd>The languages you already serve, a contact form, and the files Google needs to index the site.</dd><dd>Your existing booking widgets, maps and payment links kept in place.</dd><dd>The files and the tool that builds them. You own it; no subscription, and any developer can pick it up.</dd></div>
+          <div><dt>What I need from you</dt><dd>Nothing to start.</dd><dd>Half an hour to walk through the preview together, on a call or in messages.</dd><dd>Your corrections.</dd><dd>On launch day, access to where your domain is registered (GoDaddy, Namecheap, your hosting company). Only the website record changes; email keeps working. I will not touch anything else.</dd></div>
+          <div><dt>What it costs</dt><dd>One price for the rebuild, quoted with the preview. Corrections before launch are included.</dd><dd>Then typically $0 a month to run: plain HTML on GitHub Pages, Cloudflare Pages, Netlify, or your current provider. No plugin updates, no security patches, nothing that can break at 2 a.m.</dd><dd>After launch, small text and price changes are on me. Anything bigger, I quote first.</dd></div>
+        </dl>
       </div>
 
-      <div class="terms">
-        <h3>Working with me on a rebuild</h3>
-        <dl>
-          <div><dt>What you get</dt><dd>Every page, price, course and photo of your current site, carried over.</dd><dd>A new design in light and dark, built for phones first.</dd><dd>The languages you already serve, plus sitemap, robots and a contact form.</dd><dd>The source and the generator. You own it; no subscription.</dd></div>
-          <div><dt>What I need from you</dt><dd>Nothing to start: I build from your public site.</dd><dd>Half an hour to walk through the preview together.</dd><dd>Your corrections, as a list or a voice note.</dd><dd>DNS access on the day it goes live.</dd></div>
-          <div><dt>Hosting</dt><dd>Plain HTML, so any static host works: GitHub Pages, Cloudflare Pages, Netlify, or your current provider.</dd><dd>Typically $0 a month. No plugin updates, nothing to patch.</dd></div>
-        </dl>
+      <div class="cta">
+        <a class="btn btn-fill" href="mailto:klimanskiymatvey@gmail.com?subject=Free%20preview%20of%20my%20website&amp;body=Hi%20Matvey%2C%0A%0AMy%20current%20site%3A%20%0AWhat%20the%20business%20does%3A%20%0A%0AThanks">Get a free preview of your site</a>
+        <a class="btn" href="https://t.me/matew_1" target="_blank" rel="noopener">Message on Telegram</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= STACK ================= -->
-<section aria-label="Stack">
+<!-- ================= FAQ ================= -->
+<section id="faq">
   <div class="wrap sec">
     <div class="sec-side">
-      <span class="label">Stack</span>
-      <h2>What I reach for</h2>
+      <span class="label">Questions</span>
+      <h2>What owners ask before saying yes</h2>
     </div>
-    <div class="stackline">
-      <div><span class="label">Languages</span><p>TypeScript, Python, Go, SQL</p></div>
-      <div><span class="label">Web &amp; APIs</span><p>Next.js, Fastify, FastAPI, Django, Gin, aiogram, Socket.IO</p></div>
-      <div><span class="label">Data</span><p>PostgreSQL, MySQL, Redis, BullMQ, Drizzle, SQLAlchemy, RabbitMQ</p></div>
-      <div><span class="label">Infra &amp; tooling</span><p>Docker, Linux, nginx, GitHub Actions, Playwright, Claude Code, guard linters</p></div>
+    <div class="faq">
+      <details>
+        <summary>Why would you build it for free?</summary>
+        <div class="a"><p>Because most of the page-building is done by a tool I wrote. A 35-page site costs me a couple of days, not a month, and a preview you can click through is a better pitch than a proposal document. If you go live, I get paid; if you don't, I have lost two days and you have lost nothing.</p></div>
+      </details>
+      <details>
+        <summary>Will my text, prices and photos change?</summary>
+        <div class="a"><p>No. The design changes; the facts do not. If your site lists 95 dive sites and 42 courses, the rebuilt one lists 95 dive sites and 42 courses with the same prices. Anything you want changed, you tell me, and it changes in one place.</p></div>
+      </details>
+      <details>
+        <summary>What happens to my Google ranking, my domain and my email?</summary>
+        <div class="a"><p>The site stays on your domain. Page addresses are kept where they exist, and old addresses redirect to new ones, so links from Google, TripAdvisor and booking platforms keep working. The files Google needs are generated with the site. Nothing goes live until you say so, so there is no downtime.</p><p>Email is untouched. Going live changes only the website record of your domain; mail stays exactly where it is.</p></div>
+      </details>
+      <details>
+        <summary>Can I edit the site myself later? What do changes cost?</summary>
+        <div class="a"><p>Yes. Text and prices live in plain files, not scattered across a page builder; change a price once and every page and language follows. I show you how in the walkthrough.</p><p>If you would rather not touch it: small text and price changes, send them over, no charge. Bigger changes, a new section or a new language, I quote first.</p></div>
+      </details>
+      <details>
+        <summary>What about bookings, forms, maps, the shop?</summary>
+        <div class="a"><p>Booking widgets such as FareHarbor, maps, WhatsApp buttons and payment links are kept as they are. Contact forms work without a server. Shop catalogues can be plain files too: the California Scuba Center rebuild carries 1,277 products with filters, search and sorting, and no database.</p></div>
+      </details>
+      <details>
+        <summary>Why is it so much faster?</summary>
+        <div class="a"><p>A page builder ships dozens of scripts and plugins on every page whether they are used or not. A static site ships the page: one stylesheet, a few kilobytes of script, images sized for the screen they are shown on. That is why the home pages above got two to twenty-five times lighter, and why the hosting is free.</p></div>
+      </details>
+      <details>
+        <summary>Which languages can it have?</summary>
+        <div class="a"><p>Any. The Vietnamese rebuilds serve English, Russian, Vietnamese, Korean and Chinese, with the language switch in the header and every page available in every language.</p></div>
+      </details>
+      <details>
+        <summary>What if I don't like the preview?</summary>
+        <div class="a"><p>Then you owe nothing and the preview stays private; it is hidden from Google and never listed anywhere. If it is close but not right, tell me what is off. Corrections are part of the deal, not an extra.</p></div>
+      </details>
+      <details>
+        <summary>What if you disappear in a year?</summary>
+        <div class="a"><p>Everything is plain files on your own hosting, and you have the tool that builds them. Any developer can pick it up; there is no account with me that the site depends on.</p></div>
+      </details>
+      <details>
+        <summary>Who am I dealing with?</summary>
+        <div class="a"><img src="assets/img/avatar.jpg" alt="" width="72" height="72"><p>One person, no agency. Matvey Klimanskiy, full-stack developer, based in Nha Trang, working remotely in English or Russian. I started on the backend and moved to the front end after watching resort websites fail to load on a phone with weak Wi-Fi. I also build products of my own, listed further down, which is where the engineering habits come from.</p></div>
+      </details>
     </div>
   </div>
 </section>
@@ -473,9 +501,15 @@ a.row:hover .arrow{transform:translate(3px,-3px);color:var(--accent)}
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="contact">
   <div class="wrap">
-    <h2>Have a site that deserves better, or a product to build?</h2>
+    <h2>Send me the address of your site. The preview is on me.</h2>
     <div class="after">
-      <p>Email is fine, Telegram is faster. I answer in English or Russian, usually the same day.</p>
+      <div>
+        <p>One message is enough. I answer in English or Russian, usually the same day, and the preview link follows within a week.</p>
+        <div class="cta">
+          <a class="btn btn-fill" href="mailto:klimanskiymatvey@gmail.com?subject=Free%20preview%20of%20my%20website&amp;body=Hi%20Matvey%2C%0A%0AMy%20current%20site%3A%20%0AWhat%20the%20business%20does%3A%20%0A%0AThanks">Get a free preview of your site</a>
+        </div>
+        <p class="addr">If the button does nothing on your computer, just write to <a href="mailto:klimanskiymatvey@gmail.com">klimanskiymatvey@gmail.com</a>.</p>
+      </div>
       <div class="c-list">
         <a href="mailto:klimanskiymatvey@gmail.com">Email <span>klimanskiymatvey@gmail.com</span></a>
         <a href="https://t.me/matew_1" target="_blank" rel="noopener">Telegram <span>@matew_1</span></a>
@@ -485,26 +519,91 @@ a.row:hover .arrow{transform:translate(3px,-3px);color:var(--accent)}
     </div>
   </div>
 </section>
+
+<!-- ================= FOR DEVELOPERS: PRODUCTS & INDEX ================= -->
+<section id="more">
+  <div class="wrap sec">
+    <div class="sec-side">
+      <span class="label">For the developers reading this</span>
+      <h2>Products and other work</h2>
+      <p>Two products in development, smaller rebuilds, and the open-source tools along the way.<span class="hover-only"> Hover a row for a preview where there is one.</span></p>
+    </div>
+    <div class="index">
+      <div class="row head" aria-hidden="true"><span>Name</span><span>What</span><span>Stack</span><span>Kind</span><span></span></div>
+
+      <a class="row" href="assets/img/wipesquad.webp" target="_blank" rel="noopener" data-peek="assets/img/wipesquad.webp">
+        <span class="name">WipeSquad</span><span class="what">Teammate matching and clan CRM for the game Rust. Hours, bans and activity come straight from Steam; players get matched to rooms sized for their server's group limit. Sixteen hard rules in the repo, a guard linter in CI, backups verified by a real restore.</span><span class="tech">Next.js, TypeScript, PostgreSQL, Redis, BullMQ, Docker</span><span class="kind">Product · in development</span><span class="arrow">↗</span>
+      </a>
+      <div class="row">
+        <span class="name">MeToo</span><span class="what">Anonymous conversations between people feeling the same thing right now. Every topic starts with “Me too…” and becomes a closed room that vanishes with the conversation. Feed done, rooms next.</span><span class="tech">Expo, Fastify, Socket.IO, PostgreSQL</span><span class="kind">Product · phase 1</span><span class="arrow"></span>
+      </div>
+      <a class="row" href="https://github.com/klimanskiy1/Tutor" target="_blank" rel="noopener" data-peek="assets/img/tutor.webp">
+        <span class="name">Tutor</span><span class="what">A personal Anki on the FSRS scheduler: load any test set as JSON, answer a few a day, five card types</span><span class="tech">FastAPI, SQLite</span><span class="kind">Product · shipped</span><span class="arrow">↗</span>
+      </a>
+      <a class="row" href="assets/img/squalo-divers.webp" target="_blank" rel="noopener" data-peek="assets/img/squalo-divers.webp">
+        <span class="name">Squalo Divers</span><span class="what">42 courses with category, age and text filters, 53 dive sites by type and region, 13 video testimonials. Home page 11.6 MB → 3.6 MB, 40.7 s → 18.1 s on slow 4G.</span><span class="tech">Static, one data file</span><span class="kind">Rebuild · built unasked</span><span class="arrow">↗</span>
+      </a>
+      <a class="row" href="assets/img/webcard.webp" target="_blank" rel="noopener" data-peek="assets/img/webcard.webp">
+        <span class="name">Maritime consultant</span><span class="what">One-page business card for a ship-management consultant, in Latvian: brass on navy, a slowly turning compass</span><span class="tech">Single HTML file</span><span class="kind">One-pager</span><span class="arrow">↗</span>
+      </a>
+      <div class="row">
+        <span class="name">Auto-Red</span><span class="what">Finds outdated sites, audits them with Playwright, drafts the first email. How I find sites worth rebuilding.</span><span class="tech">Node, Playwright, IMAP/SMTP</span><span class="kind">Internal tool</span><span class="arrow"></span>
+      </div>
+      <a class="row" href="https://github.com/klimanskiy1/shortener-service" target="_blank" rel="noopener">
+        <span class="name">shortener-service</span><span class="what">URL shortener with a Docker setup and an isolated test database from the same compose file</span><span class="tech">FastAPI, PostgreSQL, Pytest</span><span class="kind">Open source</span><span class="arrow">↗</span>
+      </a>
+      <a class="row" href="https://github.com/klimanskiy1/htpy-cli-app" target="_blank" rel="noopener">
+        <span class="name">ReqPy CLI</span><span class="what">The part of Postman you actually use, in the terminal: <code>reqpy send GET example.com</code>, headers, JSON bodies, timing</span><span class="tech">Python, Click, Requests</span><span class="kind">Open source</span><span class="arrow">↗</span>
+      </a>
+      <a class="row" href="https://github.com/klimanskiy1/WardenV2" target="_blank" rel="noopener">
+        <span class="name">WardenV2</span><span class="what">Watches Avito listings and pushes new ones to Telegram; SHA-256 dedup in Redis with a two-day TTL</span><span class="tech">asyncio, Redis, aiogram</span><span class="kind">Open source</span><span class="arrow">↗</span>
+      </a>
+      <a class="row" href="https://github.com/klimanskiy1/fastapi-shop" target="_blank" rel="noopener">
+        <span class="name">fastapi-shop</span><span class="what">Backend for an electronics store: products, carts, orders, Pydantic schemas, tests. Where the FastAPI habits started.</span><span class="tech">FastAPI, SQLAlchemy, PostgreSQL</span><span class="kind">Open source</span><span class="arrow">↗</span>
+      </a>
+      <a class="row" href="https://github.com/klimanskiy1/capcut-friend" target="_blank" rel="noopener">
+        <span class="name">capcut-friend</span><span class="what">Telegram bot selling paid CapCut video-editing training, with a real payments flow</span><span class="tech">aiogram, SQLAlchemy, PostgreSQL</span><span class="kind">Open source</span><span class="arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRINCIPLES ================= -->
+<section id="method" class="offer">
+  <div class="wrap sec">
+    <div class="sec-side">
+      <span class="label">How I work</span>
+      <h2>The same rules for a client site and for my own products</h2>
+    </div>
+    <div>
+      <div class="beliefs">
+        <p><b>Nothing gets invented.</b> A rebuilt site carries the business's own text, prices, courses and photos exactly. The design changes; the facts do not.</p>
+        <p><b>Content as data, pages as code.</b> Every site ships with a small generator: change a price in one file and every page, language and sitemap follows. No page builder, no plugins, no database to keep alive.</p>
+        <p><b>A rule that exists only in prose is a suggestion.</b> In my own products the constraints live in a guard linter and pre-commit hooks, mirrored in CI. WipeSquad has sixteen of them, from “identity comes only from the server session” to “no copyleft in server code”.</p>
+        <p><b>Agents type; I accept.</b> I use AI coding agents heavily and say so. They never review their own output, a security pass runs separately, and my own eyes go over the result before anything ships or goes to a client.</p>
+      </div>
+      <div class="stackline">
+        <div><span class="label">Languages</span><p>TypeScript, Python, Go, SQL</p></div>
+        <div><span class="label">Web &amp; APIs</span><p>Next.js, Fastify, FastAPI, Django, Gin, aiogram, Socket.IO</p></div>
+        <div><span class="label">Data</span><p>PostgreSQL, MySQL, Redis, BullMQ, Drizzle, SQLAlchemy, RabbitMQ</p></div>
+        <div><span class="label">Infra &amp; tooling</span><p>Docker, Linux, nginx, GitHub Actions, Playwright, Claude Code, guard linters</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer class="site-footer">
-  <div class="wrap"><span>© 2026 Matvey Klimanskiy, Nha Trang</span><span>Static HTML, self-hosted fonts, no tracking, no cookies</span></div>
+  <div class="wrap">
+    <span>© 2026 Matvey Klimanskiy, Nha Trang · <a href="mailto:klimanskiymatvey@gmail.com">klimanskiymatvey@gmail.com</a> · <a href="https://t.me/matew_1" target="_blank" rel="noopener">Telegram</a></span>
+    <span>Static HTML, self-hosted fonts, no tracking, no cookies. Built the way I build for clients.</span>
+  </div>
 </footer>
 
 <div class="peek" id="peek" aria-hidden="true"><img alt="" width="1440" height="900"></div>
 
 <script>
 (function(){
-  var root=document.documentElement;
-  function isDark(){var t=root.getAttribute('data-theme');return t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches);}
-  var toggles=[].slice.call(document.querySelectorAll('[data-theme-toggle]'));
-  function sync(){toggles.forEach(function(b){b.setAttribute('aria-pressed',String(isDark()));});}
-  sync();
-  toggles.forEach(function(b){b.addEventListener('click',function(){
-    var next=isDark()?'light':'dark';root.setAttribute('data-theme',next);sync();
-    try{localStorage.setItem('theme',next);}catch(e){}
-  });});
-
   /* local time in the header */
   var clock=document.getElementById('clock');
   function tick(){try{clock.textContent='Nha Trang, '+new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Asia/Ho_Chi_Minh'}).format(new Date());}catch(e){}}
