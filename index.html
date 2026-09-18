@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Matvey Klimanskiy — backend developer, website rebuilds</title>
+<meta name="description" content="Matvey Klimanskiy, backend developer from Moscow. Rebuilds outdated websites for small businesses (five dive centres so far) and builds his own products: WipeSquad, «Я тоже», Tutor.">
+<link rel="canonical" href="https://klimanskiy1.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://klimanskiy1.github.io/">
+<meta property="og:title" content="Matvey Klimanskiy — websites rebuilt, products built">
+<meta property="og:description" content="Backend developer. I rebuild outdated websites for real businesses and build products of my own.">
+<meta property="og:image" content="https://klimanskiy1.github.io/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F2F4F6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1418" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23D9541E'/%3E%3Cpath d='M8 17l5 5 11-12' fill='none' stroke='%23fff' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/bricolage-grotesque-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>
+/* apply a saved theme before first paint so there is no flash */
+(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+</script>
+<style>
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/bricolage-grotesque-700-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:800;font-display:swap;src:url(assets/fonts/bricolage-grotesque-800-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/ibm-plex-mono-400-cyrillic.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/ibm-plex-mono-400-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/ibm-plex-mono-500-cyrillic.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/ibm-plex-mono-500-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/ibm-plex-sans-400-cyrillic.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/ibm-plex-sans-400-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/ibm-plex-sans-500-cyrillic.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/ibm-plex-sans-500-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/ibm-plex-sans-600-cyrillic.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/ibm-plex-sans-600-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+
+:root{
+  --bg:#F2F4F6;
+  --bg-2:#E9EDF0;
+  --panel:#FFFFFF;
+  --ink:#141A1F;
+  --ink-2:#3C4750;
+  --mute:#5C6870;
+  --line:#D5DBE0;
+  --line-2:#C2CAD1;
+  --accent:#D9541E;
+  --accent-ink:#B4420F;
+  --accent-soft:#FBE9DF;
+  --on-accent:#FFFFFF;
+  --steel:#3F6480;
+  --ok:#2F7A5B;
+  --ok-soft:#DCEFE5;
+  --wip:#7A5308;
+  --wip-soft:#F6EBCF;
+  --shadow:0 1px 2px rgba(20,26,31,.06),0 12px 32px -12px rgba(20,26,31,.18);
+  --frame:#1B2229;
+  --contact-bg:#141A1F;
+  --contact-ink:#F2F4F6;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1418;--bg-2:#151B21;--panel:#1A2128;--ink:#ECEFF1;--ink-2:#C2CAD1;--mute:#98A4AE;
+    --line:#2A333B;--line-2:#3A454E;--accent:#F0693A;--accent-ink:#F58A5F;--accent-soft:#3A2218;--on-accent:#141A1F;
+    --steel:#8FB3CE;--ok:#6FC79E;--ok-soft:#1B3328;--wip:#E0B24F;--wip-soft:#3A2F14;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 16px 40px -14px rgba(0,0,0,.6);--frame:#0B0F12;
+    --contact-bg:#07090B;--contact-ink:#ECEFF1;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1418;--bg-2:#151B21;--panel:#1A2128;--ink:#ECEFF1;--ink-2:#C2CAD1;--mute:#98A4AE;
+  --line:#2A333B;--line-2:#3A454E;--accent:#F0693A;--accent-ink:#F58A5F;--accent-soft:#3A2218;--on-accent:#141A1F;
+  --steel:#8FB3CE;--ok:#6FC79E;--ok-soft:#1B3328;--wip:#E0B24F;--wip-soft:#3A2F14;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 16px 40px -14px rgba(0,0,0,.6);--frame:#0B0F12;
+  --contact-bg:#07090B;--contact-ink:#ECEFF1;color-scheme:dark;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{
+  font-family:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:'Bricolage Grotesque','IBM Plex Sans',system-ui,sans-serif;line-height:1.05;text-wrap:balance;letter-spacing:-.01em}
+.mono{font-family:'IBM Plex Mono',ui-monospace,Consolas,monospace}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+@media(max-width:640px){.wrap{width:min(1180px,100% - 32px)}}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:16px;top:-60px;z-index:100;background:var(--accent);color:var(--on-accent);padding:10px 14px;border-radius:8px;font-weight:600}
+.skip:focus{top:12px}
+
+.label{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.label b{color:var(--accent-ink);font-weight:500}
+
+/* ---------- header ---------- */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.02rem;letter-spacing:-.01em}
+.brand i{width:26px;height:26px;border-radius:7px;background:var(--accent);display:grid;place-items:center;flex:none}
+.brand i svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.links{display:flex;gap:26px;font-size:.88rem;font-weight:500;color:var(--ink-2)}
+.links a{position:relative;padding:4px 0}
+.links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.links a:hover::after{transform:scaleX(1)}
+@media(max-width:820px){
+  .nav{flex-wrap:wrap;height:auto;padding-block:10px 0;row-gap:4px}
+  .links{order:3;width:calc(100% + 40px);margin-inline:-20px;padding:6px 20px 10px;gap:18px;overflow-x:auto;scrollbar-width:none;font-size:.84rem;white-space:nowrap}
+  .links::-webkit-scrollbar{display:none}
+}
+@media(max-width:640px){.links{width:calc(100% + 32px);margin-inline:-16px;padding-inline:16px}}
+.tools{display:flex;align-items:center;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:8px;font-size:.88rem;font-weight:600;border:1px solid var(--line-2);color:var(--ink);transition:.2s;white-space:nowrap}
+.btn svg{width:16px;height:16px;flex:none}
+.btn:hover{border-color:var(--ink);transform:translateY(-1px)}
+.btn-accent{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn-accent:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+.theme{width:38px;height:38px;border-radius:8px;border:1px solid var(--line-2);background:transparent;color:var(--ink);cursor:pointer;display:grid;place-items:center}
+.theme svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+.theme .sun{display:none}
+:root[data-theme="dark"] .theme .sun{display:block}
+:root[data-theme="dark"] .theme .moon{display:none}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .theme .sun{display:block}:root:not([data-theme="light"]) .theme .moon{display:none}}
+
+/* ---------- hero ---------- */
+.hero{padding-block:clamp(48px,8vw,104px) clamp(40px,6vw,72px);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;opacity:.45;-webkit-mask-image:radial-gradient(70% 60% at 80% 20%,#000 10%,transparent 75%);mask-image:radial-gradient(70% 60% at 80% 20%,#000 10%,transparent 75%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(280px,.9fr);gap:clamp(28px,5vw,72px);align-items:end}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(2.25rem,5.4vw,4.4rem);font-weight:800;margin:20px 0 22px;letter-spacing:-.025em}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .lead{font-size:clamp(1.05rem,1.6vw,1.22rem);color:var(--ink-2);max-width:56ch;margin-bottom:28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.cta .more{font-size:.9rem;font-weight:600;color:var(--steel);margin-left:6px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+.who{padding:22px;display:grid;gap:16px}
+.who-head{display:flex;gap:16px;align-items:center}
+.who-head img{width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid var(--line)}
+.who-head strong{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:1.15rem;font-weight:700}
+.who-head span{color:var(--mute);font-size:.88rem}
+.who dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:.9rem;border-top:1px dashed var(--line);padding-top:16px}
+.who dt{color:var(--mute);font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;padding-top:3px}
+.who dd a{color:var(--steel);font-weight:500;border-bottom:1px solid transparent}
+.who dd a:hover{border-color:var(--steel)}
+.now{display:flex;align-items:center;gap:8px;font-size:.84rem;color:var(--ink-2)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px var(--ok-soft);flex:none}
+@media (prefers-reduced-motion:no-preference){.dot{animation:pulse 2.4s infinite}}
+@keyframes pulse{50%{box-shadow:0 0 0 6px transparent}}
+
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel);margin-top:clamp(36px,5vw,64px)}
+.fact{padding:22px 24px;border-right:1px solid var(--line)}
+.fact:last-child{border-right:0}
+.fact .n{font-family:'Bricolage Grotesque',sans-serif;font-size:2rem;font-weight:800;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.fact .t{font-size:.84rem;color:var(--mute);margin-top:8px}
+@media(max-width:820px){.facts{grid-template-columns:1fr 1fr}.fact:nth-child(2){border-right:0}.fact:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+
+/* ---------- sections ---------- */
+section{padding-block:clamp(56px,8vw,104px)}
+.sec-head{display:grid;grid-template-columns:auto 1fr;gap:16px 40px;align-items:start;margin-bottom:clamp(28px,4vw,48px)}
+.sec-head h2{font-size:clamp(1.8rem,3.4vw,2.7rem);font-weight:700;letter-spacing:-.02em}
+.sec-head p{color:var(--ink-2);max-width:56ch;font-size:1.02rem;padding-top:.55em}
+@media(max-width:820px){.sec-head{grid-template-columns:1fr}.sec-head p{padding-top:0}}
+
+/* status stamp */
+.stamp{display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:4px 9px;border-radius:5px;border:1px solid;font-weight:500;white-space:nowrap}
+.stamp-live{color:var(--ok);border-color:var(--ok);background:var(--ok-soft)}
+.stamp-wip{color:var(--wip);border-color:var(--wip);background:var(--wip-soft)}
+.stamp-prop{color:var(--accent-ink);border-color:var(--accent);background:var(--accent-soft)}
+.stamp-int{color:var(--mute);border-color:var(--line-2);background:var(--bg-2)}
+
+/* browser frame with phone inset */
+.shot{position:relative;border-radius:12px;background:var(--frame);padding:26px 6px 6px;box-shadow:var(--shadow)}
+.shot::before{content:"";position:absolute;left:12px;top:9px;width:8px;height:8px;border-radius:50%;background:#E0523E;box-shadow:14px 0 0 #E7B44B,28px 0 0 #5EC26A}
+.shot img{border-radius:6px;aspect-ratio:1440/900;object-fit:cover;object-position:top;width:100%}
+.shot .phone{position:absolute;right:-14px;bottom:-18px;width:22%;min-width:84px;border-radius:14px;background:var(--frame);padding:7px 4px;box-shadow:0 14px 30px -10px rgba(0,0,0,.5)}
+.shot .phone img{border-radius:9px;aspect-ratio:390/844;object-fit:cover;object-position:top}
+@media(max-width:640px){.shot .phone{right:-6px}}
+
+/* ---------- sites ---------- */
+.sites{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,36px)}
+@media(max-width:640px){.sites{grid-template-columns:1fr}}
+.site .shot{margin-right:14px;margin-bottom:26px}
+.site h3{font-size:1.25rem;font-weight:700;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.site .sub{color:var(--mute);font-size:.86rem;margin:4px 0 10px}
+.site p{font-size:.95rem;color:var(--ink-2);max-width:60ch}
+.site .nums{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:.76rem;color:var(--ink-2)}
+.site .nums b{font-weight:500;color:var(--ink)}
+.site .p-links{margin-top:14px}
+.site.wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(20px,4vw,48px);align-items:center;padding:clamp(18px,3vw,32px);background:var(--panel);border:1px solid var(--line);border-radius:16px}
+.site.wide .shot{margin:0 18px 22px 0}
+.site.wide h3{font-size:1.5rem}
+@media(max-width:900px){.site.wide{grid-template-columns:1fr}}
+.link{display:inline-flex;align-items:center;gap:6px;font-size:.9rem;font-weight:600;color:var(--steel);border-bottom:1px solid color-mix(in srgb,var(--steel) 40%,transparent);padding-bottom:1px}
+.link:hover{border-color:var(--steel)}
+.link svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.p-links{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:22px}
+
+/* ---------- products ---------- */
+.product{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;padding-block:clamp(28px,4vw,52px);border-top:1px solid var(--line)}
+.product:last-of-type{border-bottom:1px solid var(--line)}
+.product.flip .p-media{order:2}
+@media(max-width:900px){.product,.product.flip{grid-template-columns:1fr}}
+.p-media{padding:0 18px 22px 0}
+.p-text h3{font-size:clamp(1.5rem,2.6vw,2.1rem);font-weight:700;margin:14px 0 12px;letter-spacing:-.02em}
+.p-text h3 small{display:block;font-family:'IBM Plex Sans',sans-serif;font-weight:400;font-size:1rem;color:var(--mute);letter-spacing:0;margin-top:6px;line-height:1.4}
+.p-text p{color:var(--ink-2);max-width:56ch}
+.p-text p+p{margin-top:12px}
+.p-meta{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center}
+.stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.stack span{font-family:'IBM Plex Mono',monospace;font-size:.74rem;padding:4px 9px;border-radius:5px;background:var(--bg-2);border:1px solid var(--line);color:var(--ink-2)}
+.p-facts{display:flex;flex-wrap:wrap;gap:14px 28px;margin-top:22px}
+.p-facts div{font-size:.82rem;color:var(--mute)}
+.p-facts b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:1.35rem;font-weight:700;color:var(--ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+
+/* architecture tile */
+.arch{padding:22px;display:grid;gap:12px;background:var(--panel);margin:0}
+.arch .row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.arch .node{border:1px solid var(--line-2);border-radius:9px;padding:12px 14px;background:var(--bg-2)}
+.arch .node b{display:block;font-family:'IBM Plex Mono',monospace;font-size:.8rem;font-weight:500}
+.arch .node span{font-size:.78rem;color:var(--mute);display:block;margin-top:3px;line-height:1.35}
+.arch .node.app{background:var(--accent-soft);border-color:var(--accent);grid-column:1/-1}
+.arch figcaption{font-size:.78rem;color:var(--mute);border-top:1px dashed var(--line);padding-top:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.arch .bus{text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.1em;color:var(--mute);text-transform:uppercase}
+@media(max-width:480px){.arch .row{grid-template-columns:1fr}}
+
+/* ---------- method ---------- */
+.method{background:var(--bg-2);border-block:1px solid var(--line)}
+.contour{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-block:clamp(24px,4vw,44px) clamp(28px,4vw,52px);position:relative}
+.step{position:relative;padding:20px 22px 20px 20px;background:var(--panel);border:1px solid var(--line-2);border-right:0;min-height:100%}
+.step:first-child{border-radius:12px 0 0 12px}
+.step:last-child{border-right:1px solid var(--line-2);border-radius:0 12px 12px 0}
+.step .k{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.14em;color:var(--accent-ink);text-transform:uppercase}
+.step b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:1.15rem;font-weight:700;margin:8px 0 6px;letter-spacing:-.01em}
+.step p{font-size:.85rem;color:var(--ink-2);line-height:1.5}
+.step::after{content:"";position:absolute;right:-9px;top:50%;width:16px;height:16px;background:var(--panel);border-top:1px solid var(--line-2);border-right:1px solid var(--line-2);transform:translateY(-50%) rotate(45deg);z-index:2}
+.step:last-child::after{display:none}
+.step.gate{background:var(--accent-soft);border-color:var(--accent)}
+.step.gate::after{background:var(--accent-soft);border-color:var(--accent)}
+.step.gate+.step{border-left:0}
+.reject{grid-column:2/5;font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:var(--mute);text-align:center;padding-top:10px;position:relative}
+.reject::before{content:"";position:absolute;left:8%;right:8%;top:0;border-top:1px dashed var(--line-2)}
+@media(max-width:1000px){
+  .contour{grid-template-columns:1fr;gap:10px}
+  .step,.step:first-child,.step:last-child{border-radius:12px;border-right:1px solid var(--line-2)}
+  .step.gate+.step{border-left:1px solid var(--line-2)}
+  .step::after{right:auto;left:26px;top:auto;bottom:-9px;transform:rotate(135deg);border-top:1px solid var(--line-2);border-right:1px solid var(--line-2)}
+  .reject{grid-column:1;text-align:left;padding-left:26px}
+  .reject::before{left:0;right:0}
+}
+.principles{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,3vw,32px) clamp(24px,4vw,56px)}
+@media(max-width:820px){.principles{grid-template-columns:1fr}}
+.pr h3{font-size:1.25rem;font-weight:700;margin-bottom:8px}
+.pr p{color:var(--ink-2);font-size:.97rem;max-width:58ch}
+.pr .label{display:block;margin-bottom:10px}
+
+.work{margin-top:clamp(36px,5vw,64px);display:grid;grid-template-columns:auto 1fr;gap:16px 40px;align-items:start}
+@media(max-width:820px){.work{grid-template-columns:1fr}}
+.work h3{font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:700;letter-spacing:-.02em;max-width:9ch}
+@media(max-width:820px){.work h3{max-width:none}}
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:820px){.work-grid{grid-template-columns:1fr}}
+.work-grid div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.work-grid .label{display:block;margin-bottom:10px}
+.work-grid ul{list-style:none;display:grid;gap:6px;font-size:.92rem;color:var(--ink-2)}
+.work-grid li{padding-left:16px;position:relative}
+.work-grid li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+
+/* ---------- open source ---------- */
+.oss{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(max-width:820px){.oss{grid-template-columns:1fr}}
+.repo{padding:20px 22px;display:grid;gap:10px;transition:.2s;border:1px solid var(--line);border-radius:12px;background:var(--panel);align-content:start}
+a.repo:hover{border-color:var(--ink-2);transform:translateY(-2px)}
+.repo .r-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.repo h3{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:.98rem;letter-spacing:0}
+.repo .star{font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--mute);display:inline-flex;gap:4px;align-items:center;white-space:nowrap}
+.repo .star svg{width:12px;height:12px;fill:var(--wip)}
+.repo p{font-size:.92rem;color:var(--ink-2)}
+.repo .stack{margin-top:2px}
+.tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+@media(max-width:820px){.tools-grid{grid-template-columns:1fr}}
+
+/* ---------- stack ---------- */
+.stack-table{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel)}
+@media(max-width:820px){.stack-table{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.stack-table{grid-template-columns:1fr}}
+.stack-table div{padding:20px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stack-table .label{display:block;margin-bottom:10px}
+.stack-table ul{list-style:none;display:grid;gap:4px;font-size:.92rem;color:var(--ink-2)}
+
+/* ---------- contact ---------- */
+.contact{background:var(--contact-bg);color:var(--contact-ink);padding-block:clamp(56px,8vw,104px) clamp(32px,5vw,56px)}
+.contact h2{font-size:clamp(2rem,4.6vw,3.6rem);font-weight:800;letter-spacing:-.03em;max-width:16ch}
+.contact .label{color:color-mix(in srgb,var(--contact-ink) 60%,transparent)}
+.contact p{color:color-mix(in srgb,var(--contact-ink) 78%,transparent);max-width:52ch;margin-top:16px;font-size:1.05rem}
+.c-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end}
+@media(max-width:820px){.c-grid{grid-template-columns:1fr}}
+.c-list{display:grid;gap:2px}
+.c-list a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;border-top:1px solid color-mix(in srgb,var(--contact-ink) 18%,transparent);font-size:1.05rem;font-weight:500;transition:.2s}
+.c-list a:last-child{border-bottom:1px solid color-mix(in srgb,var(--contact-ink) 18%,transparent)}
+.c-list a span{font-family:'IBM Plex Mono',monospace;font-size:.82rem;color:color-mix(in srgb,var(--contact-ink) 55%,transparent);text-align:right}
+.c-list a:hover{padding-left:8px;color:var(--accent)}
+.site-footer{background:var(--contact-bg);color:color-mix(in srgb,var(--contact-ink) 55%,transparent);padding:0 0 calc(20px + env(safe-area-inset-bottom,0px))}
+.site-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:.8rem;border-top:1px solid color-mix(in srgb,var(--contact-ink) 12%,transparent);padding-top:18px}
+</style>
+</head>
+<body>
+<a class="skip" href="#sites">Skip to the work</a>
+
+<header class="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg></i>Matvey Klimanskiy</a>
+    <nav class="links" aria-label="Sections">
+      <a href="#sites">Websites</a>
+      <a href="#products">Products</a>
+      <a href="#method">Method</a>
+      <a href="#oss">Open source</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="tools">
+      <button class="theme" id="theme" type="button" aria-label="Toggle colour theme" aria-pressed="false">
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <a class="btn" href="https://github.com/klimanskiy1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 8.4 22.9c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="label"><b>Backend developer</b> · website rebuilds · own products · Moscow</span>
+        <h1>I rebuild outdated websites for real businesses and build <em>products</em> of my own.</h1>
+        <p class="lead">Static, hand-tuned rebuilds for dive centres, and two products in development. Backend by trade; the front end came from needing sites that actually load.</p>
+        <div class="cta">
+          <a class="btn btn-accent" href="mailto:klimanskiymatvey@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            Email me
+          </a>
+          <a class="btn" href="https://t.me/matew_1" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.6L2.7 12c-1.3.5-1.3 1.2-.2 1.6l4.9 1.5 11.4-7.2c.5-.3 1-.1.6.2l-9.2 8.3-.3 5c.5 0 .7-.2 1-.5l2.4-2.3 5 3.7c.9.5 1.6.2 1.8-.9L23 5.9c.3-1.3-.5-1.9-1.1-1.3z"/></svg>
+            Telegram
+          </a>
+          <a class="more" href="#sites">See the work ↓</a>
+        </div>
+      </div>
+      <aside class="card who" aria-label="About">
+        <div class="who-head">
+          <img src="assets/img/avatar.jpg" alt="Matvey Klimanskiy" width="64" height="64">
+          <div><strong>Matvey Klimanskiy</strong><span>klimanskiy1 · on GitHub since 2021</span></div>
+        </div>
+        <div class="now"><span class="dot"></span><span>Now: dive-centre site rebuilds · WipeSquad · <span lang="ru">Я&nbsp;тоже</span></span></div>
+        <dl>
+          <dt>Stack</dt><dd>TypeScript · Python · Go · PostgreSQL · Redis · Docker</dd>
+          <dt>Where</dt><dd>Moscow, works remotely, replies in English or Russian</dd>
+          <dt>Reach</dt><dd><a href="mailto:klimanskiymatvey@gmail.com">klimanskiymatvey@gmail.com</a></dd>
+        </dl>
+      </aside>
+    </div>
+
+    <div class="facts">
+      <div class="fact"><div class="n">6</div><div class="t">full website rebuilds; 2 are open as previews, 3 are proposals built before the pitch</div></div>
+      <div class="fact"><div class="n">200+</div><div class="t">generated pages across those sites, every price and course carried over 1:1</div></div>
+      <div class="fact"><div class="n">5</div><div class="t">languages served: EN, RU, VI, KO, ZH, from Python-driven translation catalogues</div></div>
+      <div class="fact"><div class="n">2</div><div class="t">products in active development: a Rust clan platform and an anonymous-conversations app</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WEBSITES ================= -->
+<section id="sites">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Websites, rebuilt</h2>
+      <p>Static, framework-free rebuilds of real businesses: same content, same prices, every course and dive site carried over 1:1, with a design from this decade. Two are open as previews for the owners. Three are proposals: I built them first, then offered them. All are generated from Python data by a small builder, in one CSS file, with dark mode and a layout that holds at 360&nbsp;px.</p>
+    </div>
+
+    <div class="sites">
+      <article class="site wide">
+        <div class="shot">
+          <img src="assets/img/rainbow-divers.webp" alt="Rainbow Divers Vietnam home page: “Vietnam's longest-established dive centre” over an underwater photo" loading="lazy" width="1440" height="900">
+          <div class="phone"><img src="assets/img/rainbow-divers-m.webp" alt="Rainbow Divers on a phone" loading="lazy" width="390" height="844"></div>
+        </div>
+        <div>
+          <h3>Rainbow Divers Vietnam <span class="stamp stamp-live">Live preview</span></h3>
+          <div class="sub">divevietnam.com · PADI flagship, Nha Trang · est. 1996</div>
+          <p>Six dive centres, the full PADI ladder from Discover Scuba to Master Instructor, conservation and group packages. 35 finished pages in 4 languages, 123 photos taken from the current site, sitemap and robots written by the generator.</p>
+          <div class="nums"><span><b>35</b> pages</span><span><b>4</b> languages</span><span><b>123</b> photos</span><span><b>$0</b>/month hosting</span></div>
+          <div class="p-links">
+            <a class="link" href="https://klimanskiy1.github.io/rainbow-divers-vietnam/" target="_blank" rel="noopener">Open the site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+            <a class="link" href="https://github.com/klimanskiy1/rainbow-divers-vietnam" target="_blank" rel="noopener">Repository <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="site wide">
+        <div class="shot">
+          <img src="assets/img/sailing-club.webp" alt="Sailing Club Divers home page with an ocean-blue hero" loading="lazy" width="1440" height="900">
+          <div class="phone"><img src="assets/img/sailing-club-m.webp" alt="Sailing Club Divers on a phone" loading="lazy" width="390" height="844"></div>
+        </div>
+        <div>
+          <h3>Sailing Club Divers <span class="stamp stamp-live">Live preview</span></h3>
+          <div class="sub">sailingclubdivers.com · Nha Trang · WordPress → static</div>
+          <p>Ocean theme in light and dark, 5 languages from a Python translation catalogue, no tracking and no cookie banner. Generator source stays private; only the built site is published, with noindex so it never competes with the live one.</p>
+          <div class="nums"><span><b>5</b> languages</span><span><b>360 px</b> min layout</span><span><b>0</b> cookies</span></div>
+          <div class="p-links"><a class="link" href="https://klimanskiy1.github.io/sailingclubdivers-preview/" target="_blank" rel="noopener">Open the site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+        </div>
+      </article>
+
+      <article class="site">
+        <div class="shot">
+          <img src="assets/img/california-scuba.webp" alt="California Scuba Center home page" loading="lazy" width="1440" height="900">
+          <div class="phone"><img src="assets/img/california-scuba-m.webp" alt="California Scuba Center on a phone" loading="lazy" width="390" height="844"></div>
+        </div>
+        <h3>California Scuba Center <span class="stamp stamp-prop">Proposal</span></h3>
+        <div class="sub">cascubacenter.com · dive shop, school, travel</div>
+        <p>The whole shop catalogue, 1,277 products with real photos, brands and prices, with filters, search, sorting and pagination in plain JS. Plus 25 courses, 6 trips, 2 charters and every service price.</p>
+        <div class="nums"><span><b>1,277</b> shop items</span><span><b>25</b> courses</span><span><b>6</b> trips</span></div>
+        <div class="p-links"><a class="link" href="assets/img/california-scuba.webp" target="_blank" rel="noopener">Full-size screenshot <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+      </article>
+
+      <article class="site">
+        <div class="shot">
+          <img src="assets/img/ace-diving.webp" alt="Ace Diving Miami home page" loading="lazy" width="1440" height="900">
+          <div class="phone"><img src="assets/img/ace-diving-m.webp" alt="Ace Diving Miami on a phone" loading="lazy" width="390" height="844"></div>
+        </div>
+        <h3>Ace Diving Miami <span class="stamp stamp-prop">Proposal</span></h3>
+        <div class="sub">ace-diving.com · Wix → static</div>
+        <p>38 pages plus 10 blog posts, a 95-site dive map with a depth filter in feet and metres, team, policies and FareHarbor booking links. 224 images pulled off the Wix CDN and served locally.</p>
+        <div class="nums"><span><b>47</b> pages</span><span><b>95</b> dive sites</span><span><b>224</b> images</span></div>
+        <div class="p-links"><a class="link" href="assets/img/ace-diving.webp" target="_blank" rel="noopener">Full-size screenshot <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+      </article>
+
+      <article class="site">
+        <div class="shot">
+          <img src="assets/img/squalo-divers.webp" alt="Squalo Divers home page" loading="lazy" width="1440" height="900">
+          <div class="phone"><img src="assets/img/squalo-divers-m.webp" alt="Squalo Divers on a phone" loading="lazy" width="390" height="844"></div>
+        </div>
+        <h3>Squalo Divers <span class="stamp stamp-prop">Proposal</span></h3>
+        <div class="sub">scubadivinginmiami.com · Miami</div>
+        <p>A 42-course catalogue with category, age and text filters, course pages rendered from one data file, 53 dive sites by type and region, and 13 video testimonials.</p>
+        <div class="nums"><span><b>42</b> courses</span><span><b>53</b> dive sites</span><span><b>13</b> video reviews</span></div>
+        <div class="p-links"><a class="link" href="assets/img/squalo-divers.webp" target="_blank" rel="noopener">Full-size screenshot <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+      </article>
+
+      <article class="site">
+        <div class="shot">
+          <img src="assets/img/webcard.webp" alt="One-page site for a maritime consultant, in Latvian, brass on navy" loading="lazy" width="1440" height="900">
+          <div class="phone"><img src="assets/img/webcard-m.webp" alt="Maritime consultant page on a phone" loading="lazy" width="390" height="844"></div>
+        </div>
+        <h3>Maritime consultant <span class="stamp stamp-int">One-pager</span></h3>
+        <div class="sub">Ship-management consulting · Latvian</div>
+        <p>A single-page business card for a consultant with 20 years in ship management: documentation, plans and instructions, audit and inspection preparation. Brass on deep navy, a slowly turning compass, nothing else.</p>
+        <div class="nums"><span><b>1</b> page</span><span><b>0</b> dependencies</span><span><b>LV</b></span></div>
+        <div class="p-links"><a class="link" href="assets/img/webcard.webp" target="_blank" rel="noopener">Full-size screenshot <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRODUCTS ================= -->
+<section id="products" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Products</h2>
+      <p>Things I own end to end: the idea, the spec, the data model, the backend, the ops, and the decision when it is good enough to ship.</p>
+    </div>
+
+    <!-- WipeSquad -->
+    <article class="product">
+      <div class="p-media">
+        <div class="shot">
+          <img src="assets/img/wipesquad.webp" alt="WipeSquad landing page: “Build your squad before the wipe starts”, a force-wipe countdown and live player stats" loading="lazy" width="1440" height="900">
+          <div class="phone"><img src="assets/img/wipesquad-m.webp" alt="WipeSquad on a phone" loading="lazy" width="390" height="844"></div>
+        </div>
+      </div>
+      <div class="p-text">
+        <div class="p-meta"><span class="stamp stamp-wip">In build · since Jul 2026</span></div>
+        <h3>WipeSquad<small>Teammate matching and clan CRM for Rust</small></h3>
+        <p>Rust servers wipe on a schedule, and every wipe you need a squad fast. WipeSquad pulls hours, bans and activity straight from Steam, so there is no “trust me, I have 3k hours”, and matches players to rooms sized for their server's group limit. Clans get recruitment rooms, a headquarters board and a wipe calendar.</p>
+        <p>Spec before code: 16 hard rules live in the repo, a guard linter enforces them in CI, and backups are verified by an actual restore.</p>
+        <div class="p-facts">
+          <div><b>RU / EN</b>i18n from day one</div>
+          <div><b>Steam OpenID</b>server-verified sign-in</div>
+          <div><b>WS + BullMQ</b>live rooms and jobs</div>
+        </div>
+        <div class="stack"><span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Drizzle</span><span>Redis</span><span>BullMQ</span><span>WebSocket</span><span>Docker</span></div>
+      </div>
+    </article>
+
+    <!-- Я тоже -->
+    <article class="product flip">
+      <div class="p-media">
+        <figure class="card arch">
+          <div class="node app"><b>apps/mobile — Expo · React Native</b><span>Topics that start with “Me too…”, a feed, and closed rooms for a chosen number of people that vanish with the conversation.</span></div>
+          <div class="bus">↓ HTTPS &nbsp;·&nbsp; ↓ Socket.IO</div>
+          <div class="row">
+            <div class="node"><b>apps/api — Fastify</b><span>feed, topics, room entry, auth</span></div>
+            <div class="node"><b>apps/gateway — Socket.IO</b><span>conversations inside rooms only</span></div>
+            <div class="node"><b>apps/worker</b><span>timers, partitions, cleanup, later moderation and push</span></div>
+          </div>
+          <div class="row">
+            <div class="node"><b>PostgreSQL</b><span>SQL migrations are the source of truth</span></div>
+            <div class="node"><b>Redis</b><span>presence, timers</span></div>
+            <div class="node"><b>packages/shared</b><span>Zod schemas, constants, alias dictionaries</span></div>
+          </div>
+          <figcaption><span>API and gateway split from day one; they scale differently (D-006)</span><span>tests run against real Postgres, not mocks (D-012)</span></figcaption>
+        </figure>
+      </div>
+      <div class="p-text">
+        <div class="p-meta"><span class="stamp stamp-wip">Phase 1 · since Sep 2026</span><span class="label">mobile · monorepo</span></div>
+        <h3><span lang="ru">«Я тоже»</span><small>“Me too”: anonymous conversations between people feeling the same thing right now</small></h3>
+        <p>Every topic begins with the words “Me too…” (<span lang="ru">я тоже</span>), which gives the app its name. A topic becomes a closed room for a chosen number of people and disappears together with the conversation: nothing is stored, nobody is identified. Topics and the feed are done; rooms and live conversations are next.</p>
+        <p>A pnpm monorepo with a numbered decision log, a release plan with dates and money, and a <code class="mono">STATE.md</code> that says exactly where work stopped.</p>
+        <div class="p-facts">
+          <div><b>4</b>services in the monorepo</div>
+          <div><b>9</b>design documents, one per concern</div>
+          <div><b>0</b>mocks in tests</div>
+        </div>
+        <div class="stack"><span>Expo</span><span>React Native</span><span>Fastify</span><span>Socket.IO</span><span>PostgreSQL</span><span>Redis</span><span>Zod</span><span>pnpm</span></div>
+      </div>
+    </article>
+
+    <!-- Tutor -->
+    <article class="product">
+      <div class="p-media">
+        <div class="shot">
+          <img src="assets/img/tutor.webp" alt="Tutor study screen: a multiple-choice card with keyboard shortcuts" loading="lazy" width="1440" height="900">
+          <div class="phone"><img src="assets/img/tutor-m.webp" alt="Tutor deck list on a phone" loading="lazy" width="390" height="844"></div>
+        </div>
+      </div>
+      <div class="p-text">
+        <div class="p-meta"><span class="stamp stamp-live">Shipped · personal tool</span><span class="label">open source</span></div>
+        <h3>Tutor<small>A personal Anki on the FSRS scheduler</small></h3>
+        <p>Load any test set as JSON decks (English grammar, physics, whatever), answer a few every day, and the app decides what to show and when, using the same FSRS spaced-repetition algorithm modern Anki runs on. Five card types: single choice, multiple choice, true/false, typed answer, and a classic self-graded card.</p>
+        <div class="stack"><span>Python</span><span>FastAPI</span><span>FSRS</span><span>SQLite</span><span>vanilla JS</span></div>
+        <div class="p-links"><a class="link" href="https://github.com/klimanskiy1/Tutor" target="_blank" rel="noopener">Source on GitHub <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= METHOD ================= -->
+<section id="method" class="method">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>How a project goes</h2>
+      <p>The same path for a site rebuild and for my own products: understand what exists, write it down as data and rules, build, check, ship. I use AI coding agents for a lot of the typing and treat their output like a pull request from someone else, never as finished work.</p>
+    </div>
+
+    <div class="contour" role="group" aria-label="The five steps of a project">
+      <div class="step"><span class="k">Audit</span><b>Take stock of what exists</b><p>For a site: every page, price, course, photo and link of the live one. For a product: the problem, the scenarios, the risks, written down before code.</p></div>
+      <div class="step"><span class="k">Spec</span><b>Content as data, rules as rules</b><p>Text and prices go into data files, the schema into migrations, the red lines into a decision log. Pages and endpoints are written by code.</p></div>
+      <div class="step"><span class="k">Build</span><b>Generators and agents do the typing</b><p>Site builders in Python, backends in TypeScript or Python. Coding agents get a narrow brief and a scoped task, not the whole repo.</p></div>
+      <div class="step gate"><span class="k">Verify</span><b>Nothing reviews its own work</b><p>Guard linter and hooks run in CI, tests hit a real database, and security review is a separate pass that only reports findings. It never patches.</p></div>
+      <div class="step"><span class="k">Ship</span><b>Green check, own eyes, deploy</b><p>A passing pipeline does not replace looking at the result. Then it goes to a static host or a VPS behind Docker, with a backup that has been restored at least once.</p></div>
+      <div class="reject">anything that fails the check goes back to the spec, not to a hand patch</div>
+    </div>
+
+    <div class="principles">
+      <div class="pr"><span class="label">01 · content</span><h3>Nothing gets invented</h3><p>A rebuilt site carries the business's own text, prices, courses and photos 1:1. The design changes; the facts do not. If the original lists 95 dive sites, the new one lists 95 dive sites.</p></div>
+      <div class="pr"><span class="label">02 · data</span><h3>Content as data, pages as code</h3><p>Every site ships with a small generator: change a price in one file and every page, language and sitemap follows. No page builder, no plugins, no database to keep alive.</p></div>
+      <div class="pr"><span class="label">03 · rules</span><h3>A rule that exists only in prose is a suggestion</h3><p>In my own products the constraints live in a guard linter and pre-commit hooks, mirrored in CI. WipeSquad has 16 of them, from “identity comes only from the server session” to “no copyleft in server code”, each backed by a check.</p></div>
+      <div class="pr"><span class="label">04 · agents</span><h3>Agents type; I accept</h3><p>I use coding agents heavily and say so. They never review their own output, a security pass runs separately and only reports, and CI actions are pinned by commit SHA with read-only tokens, because build steps run third-party code next to your credentials.</p></div>
+    </div>
+
+    <div class="work">
+      <h3>Working with me on a rebuild</h3>
+      <div class="work-grid">
+        <div><span class="label">What you get</span><ul><li>Every page, price, course and photo of your current site, carried over</li><li>A new design in light and dark, built for phones first</li><li>The languages you already serve, plus sitemap, robots and a contact form</li><li>The source and the generator: you own it, no subscription</li></ul></div>
+        <div><span class="label">What I need from you</span><ul><li>Nothing to start: I build from your public site</li><li>Half an hour to walk through the preview together</li><li>Your corrections, as a list or a voice note</li><li>DNS access on the day it goes live</li></ul></div>
+        <div><span class="label">Hosting</span><ul><li>Plain HTML, so any static host works: GitHub Pages, Cloudflare Pages, Netlify, or your current provider</li><li>Typically $0/month, no plugin updates, nothing to patch</li><li>Loads fast on a phone in a resort with weak Wi-Fi</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OPEN SOURCE ================= -->
+<section id="oss">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Open source &amp; tools</h2>
+      <p>Backend is where I started. These are the smaller things from along the way, written by hand and still in use.</p>
+    </div>
+    <div class="oss">
+      <a class="repo" href="https://github.com/klimanskiy1/shortener-service" target="_blank" rel="noopener">
+        <div class="r-head"><h3>shortener-service</h3><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .8-5.2 4.9 1.4 7.1L12 17.8 5.8 21.4l1.4-7.1L2 9.4l7-.8z"/></svg>3</span></div>
+        <p>URL shortener with a Docker setup and an isolated test environment: a separate <code class="mono">_test</code> database, spun up from the same compose file.</p>
+        <div class="stack"><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span><span>Pytest</span></div>
+      </a>
+      <a class="repo" href="https://github.com/klimanskiy1/htpy-cli-app" target="_blank" rel="noopener">
+        <div class="r-head"><h3>ReqPy CLI</h3><span class="star">htpy-cli-app</span></div>
+        <p>The part of Postman you actually use, without leaving the terminal: <code class="mono">reqpy send GET api.github.com/users/klimanskiy1</code>, with headers, JSON bodies, collections and timing output.</p>
+        <div class="stack"><span>Python</span><span>Click</span><span>Requests</span></div>
+      </a>
+      <a class="repo" href="https://github.com/klimanskiy1/WardenV2" target="_blank" rel="noopener">
+        <div class="r-head"><h3>WardenV2</h3><span class="star">async</span></div>
+        <p>Watches Avito listings and pushes new ones to Telegram. SHA-256 dedup in Redis with a two-day TTL; errors ship their own logs to the admin chat.</p>
+        <div class="stack"><span>asyncio</span><span>Redis</span><span>aiogram</span></div>
+      </a>
+      <a class="repo" href="https://github.com/klimanskiy1/fastapi-shop" target="_blank" rel="noopener">
+        <div class="r-head"><h3>fastapi-shop</h3><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .8-5.2 4.9 1.4 7.1L12 17.8 5.8 21.4l1.4-7.1L2 9.4l7-.8z"/></svg>1</span></div>
+        <p>Backend for an electronics store: products, carts, orders, Pydantic schemas and a Pytest suite. The study project where the FastAPI habits started.</p>
+        <div class="stack"><span>FastAPI</span><span>SQLAlchemy</span><span>PostgreSQL</span><span>Pytest</span></div>
+      </a>
+    </div>
+
+    <div class="tools-grid">
+      <div class="repo">
+        <div class="r-head"><h3>Auto-Red</h3><span class="stamp stamp-int">internal</span></div>
+        <p>Lead pipeline for outdated websites: discover, audit with Playwright, approve, mockup, outreach, CRM. It is how the proposals above get found and sent.</p>
+        <div class="stack"><span>Node</span><span>Playwright</span><span>IMAP/SMTP</span></div>
+      </div>
+      <div class="repo">
+        <div class="r-head"><h3>capcut-friend</h3><span class="star">Telegram bot</span></div>
+        <p>A Telegram bot selling paid CapCut video-editing training: async handlers, a real database, a proper payments flow.</p>
+        <div class="stack"><span>aiogram</span><span>SQLAlchemy</span><span>PostgreSQL</span></div>
+      </div>
+      <div class="repo">
+        <div class="r-head"><h3>Site generators</h3><span class="star">×5</span></div>
+        <p>Each rebuilt website ships with its own small Python builder: content as data, templates as functions, thumbnails and translation catalogues generated on demand.</p>
+        <div class="stack"><span>Python</span><span>Pillow</span><span>i18n</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STACK ================= -->
+<section style="padding-top:0" aria-label="Stack">
+  <div class="wrap">
+    <div class="stack-table">
+      <div><span class="label">Languages</span><ul><li>TypeScript</li><li>Python</li><li>Go</li><li>SQL</li></ul></div>
+      <div><span class="label">Web &amp; APIs</span><ul><li>Next.js, Fastify</li><li>FastAPI, Django</li><li>Gin</li><li>aiogram, Socket.IO</li></ul></div>
+      <div><span class="label">Data</span><ul><li>PostgreSQL, MySQL</li><li>Redis, BullMQ</li><li>Drizzle, SQLAlchemy</li><li>RabbitMQ</li></ul></div>
+      <div><span class="label">Infra &amp; tooling</span><ul><li>Docker, Linux, nginx</li><li>GitHub Actions</li><li>Playwright</li><li>Claude Code, guard linters</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact">
+  <div class="wrap c-grid">
+    <div>
+      <span class="label">Contact</span>
+      <h2 style="margin-top:14px">Have a site that deserves better, or a product to build?</h2>
+      <p>Email is fine, Telegram is faster. I answer in English or Russian, usually the same day.</p>
+    </div>
+    <div class="c-list">
+      <a href="mailto:klimanskiymatvey@gmail.com">Email <span>klimanskiymatvey@gmail.com</span></a>
+      <a href="https://t.me/matew_1" target="_blank" rel="noopener">Telegram <span>@matew_1</span></a>
+      <a href="https://github.com/klimanskiy1" target="_blank" rel="noopener">GitHub <span>klimanskiy1</span></a>
+      <a href="https://www.linkedin.com/in/klimanskiy-m" target="_blank" rel="noopener">LinkedIn <span>klimanskiy-m</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap"><span>© 2026 Matvey Klimanskiy · Moscow</span><span class="mono">static html · self-hosted fonts · no tracking · no cookies</span></div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement,btn=document.getElementById('theme');
+  function isDark(){var t=root.getAttribute('data-theme');return t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches);}
+  btn.setAttribute('aria-pressed',String(isDark()));
+  btn.addEventListener('click',function(){
+    var next=isDark()?'light':'dark';root.setAttribute('data-theme',next);
+    btn.setAttribute('aria-pressed',String(next==='dark'));
+    try{localStorage.setItem('theme',next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
